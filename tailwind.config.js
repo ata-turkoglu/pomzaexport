@@ -1,17 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'primary': "#2596be"
-      }
-      
-    },
-  },
-  plugins: [],
-}
+const withMT = require("@material-tailwind/react/utils/withMT");
 
+//export default {
+//    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+//    theme: {
+//        extend: {
+//            colors: {
+//                primary: "#2596be",
+//            },
+//        },
+//    },
+//    plugins: [],
+//};
+
+export default withMT({
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    theme: {
+        extend: {
+            colors: {
+                primary: "#2596be",
+            },
+        },
+    },
+    plugins: [],
+});

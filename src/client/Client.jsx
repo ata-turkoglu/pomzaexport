@@ -4,11 +4,22 @@ import Footer from "./components/footer.jsx";
 import { Outlet } from "react-router-dom";
 
 function Client() {
+    const toBottom = () => {
+        window.scrollBy({
+            top: 3000,
+            left: 0,
+            behavior: "smooth",
+        });
+    };
     return (
-        <div className="client">
-            <Header />
-            <Outlet />
-            <Footer />
+        <div className="flex flex-col">
+            <div className="flex flex-col h-screen overflow-hidden">
+                <Header toBottom={toBottom} />
+                <Outlet />
+            </div>
+            <div className="w-full">
+                <Footer />
+            </div>
         </div>
     );
 }
