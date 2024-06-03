@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import pomzaexport from "../../assets/pomzaexport-logo-white.png";
 import { Link } from "react-router-dom";
 
 function Header({ toBottom }) {
@@ -13,7 +12,7 @@ function Header({ toBottom }) {
                     className="text-2xl font-semibold flex items-center"
                 >
                     <img
-                        src={pomzaexport}
+                        src="/assets/logo/pomzaexport-logo-white.png"
                         alt="Pomzaexport Logo"
                         className="w-60"
                     />

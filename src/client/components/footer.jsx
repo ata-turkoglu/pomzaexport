@@ -1,5 +1,4 @@
 import React from "react";
-import pomzaexport from "../../assets/pomzaexport-logo-white.png";
 import { Linkedin, Facebook, Youtube } from "lucide-react";
 
 function Footer() {
@@ -12,7 +11,7 @@ function Footer() {
                         className="text-2x1 font-semibold flex items-center space-x-3 text-primary"
                     >
                         <img
-                            src={pomzaexport}
+                            src="/assets/logo/pomzaexport-logo-white.png"
                             alt=""
                             className="w-60 inline-block items-center"
                         />
@@ -64,7 +63,7 @@ function Footer() {
                                 Kuvars
                             </a>
                             <a href="/" className="block hover:text-gray-300">
-                                Bims Blok
+                                Agrega
                             </a>
                             <a href="/" className="block hover:text-gray-300">
                                 Pomza
@@ -76,16 +75,16 @@ function Footer() {
                                 Rutil
                             </a>
                             <a href="/" className="block hover:text-gray-300">
-                                Hematit
-                            </a>
-                            <a href="/" className="block hover:text-gray-300">
                                 Garnet
                             </a>
                             <a href="/" className="block hover:text-gray-300">
-                                Silis
+                                Hematit
                             </a>
                             <a href="/" className="block hover:text-gray-300">
-                                Agrega
+                                Silis Kumu
+                            </a>
+                            <a href="/" className="block hover:text-gray-300">
+                                Bims Blok
                             </a>
                             <a href="/" className="block hover:text-gray-300">
                                 Korund
