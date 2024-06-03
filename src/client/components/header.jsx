@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import pomzaexport from "../../assets/pomzaexport-logo-white.png";
 import { Link } from "react-router-dom";
+import { AlignJustify, X } from "lucide-react";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-[#010851] p-4">
@@ -11,63 +19,76 @@ function Header() {
         <a href="/" className="text-2xl font-semibold flex items-center">
           <img src={pomzaexport} alt="Pomzaexport Logo" className="w-60" />
         </a>
+
         <div className="md:hidden">
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             type="button"
-            className="text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
+            className="text-white focus:outline-none focus:text-gray-300"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              />
-            </svg>
+            {isOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <AlignJustify className="w-6 h-6 text-white" />
+            )}
           </button>
         </div>
+
         <div className="hidden md:flex md:items-center space-x-4">
-          <Link to="/about" className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium">
+          <Link
+            to="/about"
+            className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+          >
             Hakkımızda
           </Link>
-          <Link to="/products" className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium">
+          <Link
+            to="/products"
+            className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+          >
             Ürünlerimiz
           </Link>
-          <Link to="/docs" className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium">
+          <Link
+            to="/docs"
+            className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+          >
             Belgelerimiz
           </Link>
-          <Link to="/contact" className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium">
+          <Link
+            to="/contact"
+            className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+          >
             İletişim
           </Link>
         </div>
       </div>
       {isOpen && (
-        <div className="fixed top-0 right-0 h-full w-64 bg-[#010851] z-50 flex flex-col items-center p-4 text-white md:hidden">
-          <button
-            onClick={() => setIsOpen(false)}
-            type="button"
-            className="self-end text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
+        <div className="absolute top-16 right-0 w-full bg-[rgba(1,8,81,0.85)] z-50 flex flex-col items-center p-4 text-white md:hidden transition duration-300 ease-in-out transform">
+          <Link
+            to="/about"
+            onClick={closeMenu}
+            className="mt-10 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-          <Link to="/about" className="mt-10 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium">
             Hakkımızda
           </Link>
-          <Link to="/products" className="mt-4 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium">
+          <Link
+            to="/products"
+            onClick={closeMenu}
+            className="mt-4 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium"
+          >
             Ürünlerimiz
           </Link>
-          <Link to="/docs" className="mt-4 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium">
+          <Link
+            to="/docs"
+            onClick={closeMenu}
+            className="mt-4 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium"
+          >
             Belgelerimiz
           </Link>
-          <Link to="/contact" className="mt-4 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium">
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+            className="mt-4 text-white hover:text-gray-400 px-3 py-2 rounded-md text-xl font-medium"
+          >
             İletişim
           </Link>
         </div>
