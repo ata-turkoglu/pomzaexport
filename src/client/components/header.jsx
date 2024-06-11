@@ -5,11 +5,11 @@ function Header({ toBottom }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-[#010851] p-4">
-            <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+        <nav className="bg-[black]/25 p-4 fixed z-10 w-full">
+            <div className="w-full flex justify-between items-center">
                 <a
                     href="/"
-                    className="text-2xl font-semibold flex items-center"
+                    className="w-1/2 md:w-1/4 font-semibold flex items-start"
                 >
                     <img
                         src="/assets/logo/pomzaexport-logo-white.png"
@@ -17,7 +17,7 @@ function Header({ toBottom }) {
                         className="w-60"
                     />
                 </a>
-                <div className="md:hidden">
+                <div className="md:hidden flex items-center">
                     <button
                         onClick={toBottom}
                         type="button"
@@ -45,25 +45,25 @@ function Header({ toBottom }) {
                 <div className="hidden md:flex md:items-center space-x-4">
                     <Link
                         to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         Hakkımızda
                     </Link>
                     <Link
                         to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         Ürünlerimiz
                     </Link>
                     <Link
                         to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         Belgelerimiz
                     </Link>
                     <Link
                         onClick={toBottom}
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         İletişim
                     </Link>

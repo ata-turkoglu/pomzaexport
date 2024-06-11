@@ -30,7 +30,7 @@ function Footer() {
                     <input
                         type="submit"
                         value="Subscribe"
-                        className="px-3 py-2 bg-[#2769ae] rounded-md -ml-2 cursor-pointer hover:bg-[#cad9eb] hover:bg-[#010851] duration-300 transition-all"
+                        className="px-3 py-2 bg-[#010851] rounded-md -ml-2 cursor-pointer hover:bg-[#010851]/10 duration-300 transition-all"
                     />
                 </div>
                 {/* footer navigations */}

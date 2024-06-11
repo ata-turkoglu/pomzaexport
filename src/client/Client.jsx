@@ -13,9 +13,9 @@ function Client() {
     };
     return (
         <div className="flex flex-col">
-            <div className="flex flex-col h-screen overflow-hidden">
+            <div className="flex flex-col h-max overflow-hidden">
                 <Header toBottom={toBottom} />
-                <Outlet />
+                <Outlet className="h-max" />
             </div>
             <div className="w-full">
                 <Footer />
