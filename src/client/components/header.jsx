@@ -45,25 +45,25 @@ function Header({ toBottom }) {
                 <div className="hidden md:flex md:items-center space-x-4">
                     <Link
                         to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         Hakkımızda
                     </Link>
                     <Link
                         to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         Ürünlerimiz
                     </Link>
                     <Link
                         to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         Belgelerimiz
                     </Link>
                     <Link
                         onClick={toBottom}
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     >
                         İletişim
                     </Link>
