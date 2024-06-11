@@ -55,7 +55,7 @@ function Footer() {
 
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">Ürünlerimiz</h4>
-                        <ul className="space-y3">
+                        <ul className="space-y-3">
                             <a href="/" className="block hover:text-gray-300">
                                 Altın
                             </a>
@@ -93,16 +93,57 @@ function Footer() {
                     </div>
 
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline">İletişim</h4>
-                        <ul className="space-y3">
+                        <h4 className="text-xl underline">
+                            İletişim Adreslerimiz
+                        </h4>
+                        <ul className="space-y-5 text-sm">
                             <p className="hover:text-gray-300">
-                                Sart Mah. Pomza Sk. No:40 Salihli/Manisa
+                                <strong>SART MADEN İŞLETMESİ</strong>
+                                <br />
+                                Sart Mah. Pomza Sk. No: 40, Salihli/MANİSA
+                                <br />
+                                Telefon : +90 236 774 20 21
+                                <br />
+                                Fax : +90 236 774 30 51
                             </p>
                             <p className="hover:text-gray-300">
-                                Tel: +90 236 724 20 21
+                                <strong>MENDERES MADEN İŞLETMESİ</strong>
+                                <br />
+                                Küner Mah. 7801 Sk. No:94 Menderes/İZMİR
+                                <br />
+                                Telefon : +90 232 782 14 46
+                                <br />
+                                Fax : +90 232 782 15 98
                             </p>
                             <p className="hover:text-gray-300">
-                                Fax: +90 236 724 30 51
+                                <strong>ETİPER PERLİT İŞLETMESİ</strong>
+                                <br />
+                                Yeniköy Mah. Menderes - Orhanlı Yolu Sk. No :
+                                179/22 Menderes/İZMİR
+                                <br />
+                                Telefon : +90 232 787 67 24
+                                <br />
+                                Fax : +90 232 782 67 25
+                            </p>
+                            <p className="hover:text-gray-300">
+                                <strong>EİLE POMEX YAPI KİMYASALLARI</strong>
+                                <br />
+                                Kavaklıdere Cad. No: 277
+                                Kavaklıdere/Bornova/İZMİR
+                                <br />
+                                Telefon : +90 232 360 16 16
+                                <br />
+                                Fax : +90 232 360 17 77
+                            </p>
+                            <p className="hover:text-gray-300">
+                                <strong>ANKARA OFİS</strong>
+                                <br />
+                                Çukurca Birlik Mah. 447 Sk. No: 3/5
+                                Çankaya/ANKARA
+                                <br />
+                                Telefon : +90 312 495 64 50
+                                <br />
+                                Fax : +90 312 495 64 93
                             </p>
                         </ul>
                     </div>
