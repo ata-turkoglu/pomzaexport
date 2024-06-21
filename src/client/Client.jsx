@@ -12,14 +12,14 @@ function Client() {
         });
     };
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col overflow-hidden">
             <div className="flex flex-col h-max overflow-hidden">
                 <Header toBottom={toBottom} />
                 <Outlet className="h-max" />
             </div>
-            <div className="w-full">
+            {/* <div className="w-full">
                 <Footer />
-            </div>
+            </div> */}
         </div>
     );
 }

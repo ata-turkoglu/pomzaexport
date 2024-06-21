@@ -5,7 +5,7 @@ function Header({ toBottom }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-[black]/25 p-4 fixed z-10 w-full">
+        <nav className=" p-4 fixed z-10 w-full">
             <div className="w-full flex justify-between items-center">
                 <a
                     href="/"

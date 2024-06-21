@@ -10,19 +10,19 @@ import Contact from "./client/pages/Contact";
 import Client from "./client/Client";
 
 function App() {
-  return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Client />}>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/products" element={<Products />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/docs" element={<Docs />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-        </Route>
-      </Routes>
-    </div>
-  );
+    return (
+        <div className="overflow-hidden">
+            <Routes>
+                <Route path="/" element={<Client />}>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/products" element={<Products />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                    <Route path="/docs" element={<Docs />}></Route>
+                    <Route path="/contact" element={<Contact />}></Route>
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
