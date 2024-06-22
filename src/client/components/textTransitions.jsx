@@ -20,7 +20,7 @@ export default function TextTransitions({ children }) {
             return (
                 <span
                     key={idx}
-                    className="mr-2 text-white text-2xl md:text-5xl"
+                    className="tt mr-2 text-white text-2xl md:text-5xl"
                 >
                     {el}
                 </span>
@@ -34,7 +34,7 @@ export default function TextTransitions({ children }) {
                 <h1
                     id={"text" + index}
                     key={index}
-                    className={index == 0 ? "" : "hidden"}
+                    className={index != 0 ? "tth1 hidden" : "tth1"}
                 >
                     {setWords(item)}
                 </h1>
@@ -42,7 +42,7 @@ export default function TextTransitions({ children }) {
         });
         setContent(list);
 
-        let counter = 0;
+        let counter = 1;
 
         const showIntrvl = setInterval(() => {
             if (counter != 0) {
