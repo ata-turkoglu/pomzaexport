@@ -4,6 +4,7 @@ import "./css/facilityBanner.css";
 export function ProductContainer({ img, name, link }) {}
 
 export default function FacilityBanner({
+    keyNum,
     mainImg,
     direction,
     header,
@@ -65,7 +66,7 @@ export default function FacilityBanner({
     }, []);
 
     useEffect(() => {
-        const el = document.getElementById("showImage");
+        const el = document.getElementById("showImage" + keyNum);
         if (showingImage) {
             el.classList.remove("leaveAnim");
             el.classList.add("enterAnim");
@@ -97,11 +98,17 @@ export default function FacilityBanner({
                 {/* info */}
                 <div
                     id="info"
-                    className="text-[#010851] absolute mx-auto left-0 right-0 z-10 h-full w-3/4 md:h-1/2 md:w-full bg-white flex flex-col p-4 md:p-7 overflow-hidden"
+                    className="text-[#010851] absolute mx-auto left-0 right-0 z-10 h-full w-11/12 md:h-1/2 md:w-full bg-white flex flex-col p-4 md:p-7 overflow-hidden"
                     style={{
                         boxShadow: "0 0 10px grey",
                         top: mobileView ? "70%" : "100px",
-                        left: direction == "right" ? "-170%" : "85%",
+                        left: !mobileView
+                            ? direction == "right"
+                                ? "-170%"
+                                : "85%"
+                            : "",
+                        opacity: mobileView ? ".95" : "1",
+                        border: "1px solid #010851",
                     }}
                 >
                     <div className="h-full flex flex-col justify-between">
@@ -120,7 +127,7 @@ export default function FacilityBanner({
                         </div>
                     </div>
                     <div
-                        id="showImage"
+                        id={"showImage" + keyNum}
                         className="absolute left-0 top-0 w-full h-full bg-black z-20 hidden"
                     >
                         <img
@@ -135,7 +142,7 @@ export default function FacilityBanner({
             <div
                 className="absolute px-6 w-full h-fit flex items-center"
                 style={{
-                    top: "75%",
+                    top: mobileView ? "83%" : "75%",
                     justifyContent: direction == "left" ? "end" : "start",
                 }}
             >
