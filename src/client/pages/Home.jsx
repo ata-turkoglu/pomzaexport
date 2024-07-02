@@ -4,6 +4,7 @@ import IntroVideo from "../components/introVideo";
 import ProductSlider from "../components/productSlider/productSlider";
 import SectionScroller, { SectionPart } from "../components/sectionScroller";
 import FacilityBanner, { ProductContainer } from "../components/facilityBanner";
+import Footer from "../components/footer";
 
 function Home() {
     return (
@@ -37,7 +38,17 @@ function Home() {
                     >
                         <ProductContainer
                             img="/assets/products/quartz.jpg"
+                            name="altın"
+                            link="/"
+                        />
+                        <ProductContainer
+                            img="/assets/products/quartz.jpg"
                             name="quartz"
+                            link="/"
+                        />
+                        <ProductContainer
+                            img="/assets/products/quartz.jpg"
+                            name="agrega"
                             link="/"
                         />
                         <ProductContainer
@@ -52,7 +63,12 @@ function Home() {
                         />
                         <ProductContainer
                             img="/assets/products/silis.jpg"
-                            name="perlit"
+                            name="silis"
+                            link="/"
+                        />
+                        <ProductContainer
+                            img="/assets/products/silis.jpg"
+                            name="hazır beton"
                             link="/"
                         />
                     </FacilityBanner>
@@ -82,22 +98,17 @@ function Home() {
                     >
                         <ProductContainer
                             img="/assets/products/perlit.jpg"
-                            name="quartz"
+                            name="perlit"
                             link="/"
                         />
                         <ProductContainer
                             img="/assets/products/rutil.jpg"
-                            name="rutil"
+                            name="bims"
                             link="/"
                         />
                         <ProductContainer
                             img="/assets/products/garnet.jpg"
                             name="garnet"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/silis.jpg"
-                            name="perlit"
                             link="/"
                         />
                     </FacilityBanner>
@@ -127,28 +138,21 @@ function Home() {
                     >
                         <ProductContainer
                             img="/assets/products/quartz.jpg"
-                            name="quartz"
+                            name="pomza"
                             link="/"
                         />
                         <ProductContainer
                             img="/assets/products/rutil.jpg"
-                            name="rutil"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/garnet.jpg"
-                            name="garnet"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/silis.jpg"
-                            name="perlit"
+                            name="korund"
                             link="/"
                         />
                     </FacilityBanner>
                 </SectionPart>
                 <SectionPart>
                     <IntroCarousel />
+                </SectionPart>
+                <SectionPart>
+                    <Footer hFull={true} />
                 </SectionPart>
             </SectionScroller>
         </div>

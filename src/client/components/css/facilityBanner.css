@@ -5,6 +5,22 @@
     animation: slideDown .5s ease;
 }
 
+.scale{
+    animation: scaleImage 40s linear alternate infinite;
+}
+
+@keyframes scaleImage {
+    from {
+        /* object-position: 30%; */
+        transform: scale(1);
+    }
+
+    to {
+        /* object-position: 80%; */
+        transform: scale(1.4);
+    }
+}
+
 @keyframes slideUp {
     0% {
         transform: translateY(100%);

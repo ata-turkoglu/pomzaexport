@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./css/facilityBanner.css";
 
 export function ProductContainer({ img, name, link }) {}
@@ -88,27 +89,31 @@ export default function FacilityBanner({
                 flexDirection: direction == "right" ? "row-reverse" : "row",
             }}
         >
-            <div className="h-1/2 w-full md:h-full md:w-1/2 relative">
+            <div className="h-full w-full md:h-full md:w-1/2 relative">
                 <img
-                    className="h-full w-full object-cover z-0"
+                    className="h-full w-full object-cover z-0 scale"
                     src={mainImg}
-                    style={{ filter: "brightness(80%)" }}
+                    style={{
+                        filter: mobileView
+                            ? "brightness(60%)"
+                            : "brightness(80%)",
+                    }}
                 ></img>
 
                 {/* info */}
                 <div
                     id="info"
-                    className="text-[#010851] absolute mx-auto left-0 right-0 z-10 h-full w-11/12 md:h-1/2 md:w-full bg-white flex flex-col p-4 md:p-7 overflow-hidden"
+                    className="text-white md:text-[#010851] absolute mx-auto left-0 right-0 z-10 h-1/2 w-11/12 md:h-1/2 md:w-full bg-transparent md:bg-white flex flex-col p-4 md:p-7 overflow-hidden"
                     style={{
-                        boxShadow: "0 0 10px grey",
-                        top: mobileView ? "70%" : "100px",
+                        boxShadow: mobileView ? "none" : "0 0 10px grey",
+                        top: mobileView ? "25%" : "130px",
                         left: !mobileView
                             ? direction == "right"
                                 ? "-170%"
                                 : "85%"
                             : "",
                         opacity: mobileView ? ".95" : "1",
-                        border: "1px solid #010851",
+                        border: mobileView ? "none" : "1px solid #010851",
                     }}
                 >
                     <div className="h-full flex flex-col justify-between">
@@ -121,9 +126,16 @@ export default function FacilityBanner({
                             </span>
                         </div>
                         <div className="w-full flex items-center justify-end">
-                            <span className="cursor-pointer drop-shadow">
+                            <Link
+                                className="cursor-pointer drop-shadow p-3"
+                                to={"/mine/" + keyNum}
+                                style={{
+                                    border: "1px solid #010851",
+                                    boxShadow: "0 0 10px grey",
+                                }}
+                            >
                                 Detaylı Bilgi
-                            </span>
+                            </Link>
                         </div>
                     </div>
                     <div

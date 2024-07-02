@@ -1,0 +1,56 @@
+[
+    {
+        "id": 0,
+        "name": { "tr": "Altın", "en": "Gold" },
+        "image": "/assets/products/gold.jpg",
+        "images": [],
+        "description": "",
+        "production": "",
+        "technicalInfo": ""
+    },
+    {
+        "id": 1,
+        "name": { "tr": "Kuvars", "en": "Quartz" },
+        "image": "/assets/products/gold.jpg",
+        "images": [],
+        "description": "",
+        "production": "",
+        "technicalInfo": ""
+    },
+    {
+        "id": 2,
+        "name": { "tr": "Rutil", "en": "Rutile" },
+        "image": "/assets/products/rutil.jpg",
+        "images": [],
+        "description": "",
+        "production": "",
+        "technicalInfo": ""
+    },
+    {
+        "id": 3,
+        "name": { "tr": "Agrega", "en": "Agregates" },
+        "image": "/assets/products/silis.jpg",
+        "images": [],
+        "description": "",
+        "production": "",
+        "technicalInfo": ""
+    },
+    {
+        "id": 4,
+        "name": { "tr": "Garnet", "en": "Garnet" },
+        "image": "/assets/products/garnet.jpg",
+        "images": [],
+        "description": "",
+        "production": "",
+        "technicalInfo": ""
+    },
+    {
+        "id": 5,
+        "name": { "tr": "Silis Kumu", "en": "Silica Sand" },
+        "image": "/assets/products/silis.jpg",
+        "images": [],
+        "description": "",
+        "production": "",
+        "technicalInfo": ""
+    }
+]

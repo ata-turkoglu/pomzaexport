@@ -1,11 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import productsJSON from "../../data/products.json";
+import minesJSON from "../../data/mines.json";
+import "./css/header.css";
 
 function Header({ toBottom }) {
+    const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
+    const [products, setProducts] = useState([]);
+    const [mines, setMines] = useState([]);
+
+    useEffect(() => {
+        const pData = productsJSON.map((item) => {
+            return { id: item.id, name: item.name };
+        });
+        setProducts(pData);
+        const mData = minesJSON.map((item) => {
+            return { id: item.id, name: item.name };
+        });
+        setMines(mData);
+    }, []);
 
     return (
-        <nav className=" p-4 fixed z-10 w-full">
+        <nav className="bg-[#010851] p-4 fixed z-10 w-full">
             <div className="w-full flex justify-between items-center">
                 <a
                     href="/"
@@ -17,6 +34,7 @@ function Header({ toBottom }) {
                         className="w-60"
                     />
                 </a>
+                {/* Mobile Menu Icon */}
                 <div className="md:hidden flex items-center">
                     <button
                         onClick={toBottom}
@@ -49,18 +67,42 @@ function Header({ toBottom }) {
                     >
                         Hakkımızda
                     </Link>
-                    <Link
-                        to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-md font-medium cursor-pointer"
-                    >
+                    <span className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-md font-medium cursor-pointer relative nav-link">
+                        İşletmelerimiz
+                        <ul className="nav-list bg-[#010851]">
+                            {mines.map((item, key) => {
+                                return (
+                                    <li
+                                        key={key}
+                                        className="text-md text-white w-full px-6 pb-5 duration-200 z-10"
+                                        onClick={() =>
+                                            navigate("/mine/" + item.id)
+                                        }
+                                    >
+                                        {item.name.tr}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </span>
+                    <span className="text-white px-3 py-2 rounded-md text-md font-medium cursor-pointer relative nav-link">
                         Ürünlerimiz
-                    </Link>
-                    <Link
-                        to="/"
-                        className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-md font-medium cursor-pointer"
-                    >
-                        Belgelerimiz
-                    </Link>
+                        <ul className="nav-list bg-[#010851]">
+                            {products.map((item, key) => {
+                                return (
+                                    <li
+                                        key={key}
+                                        className="text-md text-white w-full px-6 pb-5 duration-200 z-10"
+                                        onClick={() =>
+                                            navigate("/product/" + item.id)
+                                        }
+                                    >
+                                        {item.name.tr}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </span>
                     <Link
                         onClick={toBottom}
                         className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-md font-medium cursor-pointer"
@@ -69,6 +111,7 @@ function Header({ toBottom }) {
                     </Link>
                 </div>
             </div>
+            {/* Mobile Menu */}
             {false && (
                 <div className="fixed top-0 right-0 h-full w-64 bg-[#010851] z-50 flex flex-col items-center p-4 text-white md:hidden">
                     <button
