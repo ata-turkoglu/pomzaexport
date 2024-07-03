@@ -4,7 +4,7 @@ import { Linkedin, Facebook, Youtube } from "lucide-react";
 function Footer({ hFull = false }) {
     return (
         <div
-            className="bg-[#010851] md:px-10 p-3 max-w-screen-2x1 mx-auto text-white"
+            className="bg-[#252525] md:px-10 p-3 max-w-screen-2x1 mx-auto text-white"
             style={{ height: hFull ? "100vh" : "fit-content" }}
         >
             <div className="my-12 flex flex-col md:flex-row gap-10">
@@ -35,7 +35,7 @@ function Footer({ hFull = false }) {
                     <input
                         type="submit"
                         value="Subscribe"
-                        className="px-3 py-2 bg-[#010851] rounded-md -ml-2 cursor-pointer hover:bg-[#010851]/10 duration-300 transition-all"
+                        className="px-3 py-2 bg-[#252525] rounded-md -ml-2 cursor-pointer hover:bg-[#010851]/10 duration-300 transition-all"
                     />
                 </div>
                 {/* footer navigations */}

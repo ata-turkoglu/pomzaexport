@@ -3,7 +3,7 @@ import { IntroCarousel } from "../components/introCarousel";
 import IntroVideo from "../components/introVideo";
 import ProductSlider from "../components/productSlider/productSlider";
 import SectionScroller, { SectionPart } from "../components/sectionScroller";
-import FacilityBanner, { ProductContainer } from "../components/facilityBanner";
+import FacilityBanner from "../components/facilityBanner";
 import Footer from "../components/footer";
 
 function Home() {
@@ -15,138 +15,21 @@ function Home() {
                 </SectionPart>
                 <SectionPart>
                     <FacilityBanner
-                        keyNum="1"
-                        mainImg="/assets/common/pit.jpg"
-                        header="Sart Maden İşletmemiz"
-                        content="Pomza Export A.Ş. Salihli Sart bölgesinde
-                                kurduğu plaser madeni işletmesi %100 yerli
-                                sermaye ve teknoloji kullanılmak suretiyle
-                                sektörde ilk altın üreten yerli firma olmuştur.
-                                Madencilik sektöründe 40 yılı aşkın elde ettiği
-                                tecrübesini inşaat sektörüne ileri teknoloji ve
-                                çevreci malzemeler üretmekte kullanan POMZA
-                                EXPORT A.Ş. bu maksatla; PERSAN markasıyla
-                                perlit beton kiremidi ve EILE POMEX markasıyla
-                                ileri teknoloji yapı kimyasallarını inşaat
-                                sektörüne kazandırmıştır. Şirketin hedefi;
-                                faaliyette bulunduğumuz sektörlerde pazarın
-                                beklentilerine cevap verebilecek; koşulsuz
-                                müşteri memnuniyeti veren, kaliteli, çevreci,
-                                ileri teknoloji ürünler üretmek ve kendini
-                                sürekli yinelemektir."
+                        mineId="1"
                         direction="left"
-                    >
-                        <ProductContainer
-                            img="/assets/products/quartz.jpg"
-                            name="altın"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/quartz.jpg"
-                            name="quartz"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/quartz.jpg"
-                            name="agrega"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/rutil.jpg"
-                            name="rutil"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/garnet.jpg"
-                            name="garnet"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/silis.jpg"
-                            name="silis"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/silis.jpg"
-                            name="hazır beton"
-                            link="/"
-                        />
-                    </FacilityBanner>
+                    ></FacilityBanner>
                 </SectionPart>
                 <SectionPart>
                     <FacilityBanner
-                        keyNum="2"
-                        mainImg="/assets/common/yenikoy.jpg"
-                        header="Yeniköy İşletmemiz"
-                        content="Pomza Export A.Ş. Salihli Sart bölgesinde
-                                kurduğu plaser madeni işletmesi %100 yerli
-                                sermaye ve teknoloji kullanılmak suretiyle
-                                sektörde ilk altın üreten yerli firma olmuştur.
-                                Madencilik sektöründe 40 yılı aşkın elde ettiği
-                                tecrübesini inşaat sektörüne ileri teknoloji ve
-                                çevreci malzemeler üretmekte kullanan POMZA
-                                EXPORT A.Ş. bu maksatla; PERSAN markasıyla
-                                perlit beton kiremidi ve EILE POMEX markasıyla
-                                ileri teknoloji yapı kimyasallarını inşaat
-                                sektörüne kazandırmıştır. Şirketin hedefi;
-                                faaliyette bulunduğumuz sektörlerde pazarın
-                                beklentilerine cevap verebilecek; koşulsuz
-                                müşteri memnuniyeti veren, kaliteli, çevreci,
-                                ileri teknoloji ürünler üretmek ve kendini
-                                sürekli yinelemektir."
+                        mineId="2"
                         direction="right"
-                    >
-                        <ProductContainer
-                            img="/assets/products/perlit.jpg"
-                            name="perlit"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/rutil.jpg"
-                            name="bims"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/garnet.jpg"
-                            name="garnet"
-                            link="/"
-                        />
-                    </FacilityBanner>
+                    ></FacilityBanner>
                 </SectionPart>
                 <SectionPart>
                     <FacilityBanner
-                        keyNum="3"
-                        mainImg="/assets/common/kuner.jpg"
-                        header="Küner İşletmemiz"
-                        content="Pomza Export A.Ş. Salihli Sart bölgesinde
-                                kurduğu plaser madeni işletmesi %100 yerli
-                                sermaye ve teknoloji kullanılmak suretiyle
-                                sektörde ilk altın üreten yerli firma olmuştur.
-                                Madencilik sektöründe 40 yılı aşkın elde ettiği
-                                tecrübesini inşaat sektörüne ileri teknoloji ve
-                                çevreci malzemeler üretmekte kullanan POMZA
-                                EXPORT A.Ş. bu maksatla; PERSAN markasıyla
-                                perlit beton kiremidi ve EILE POMEX markasıyla
-                                ileri teknoloji yapı kimyasallarını inşaat
-                                sektörüne kazandırmıştır. Şirketin hedefi;
-                                faaliyette bulunduğumuz sektörlerde pazarın
-                                beklentilerine cevap verebilecek; koşulsuz
-                                müşteri memnuniyeti veren, kaliteli, çevreci,
-                                ileri teknoloji ürünler üretmek ve kendini
-                                sürekli yinelemektir."
+                        mineId="3"
                         direction="left"
-                    >
-                        <ProductContainer
-                            img="/assets/products/quartz.jpg"
-                            name="pomza"
-                            link="/"
-                        />
-                        <ProductContainer
-                            img="/assets/products/rutil.jpg"
-                            name="korund"
-                            link="/"
-                        />
-                    </FacilityBanner>
+                    ></FacilityBanner>
                 </SectionPart>
                 <SectionPart>
                     <IntroCarousel />

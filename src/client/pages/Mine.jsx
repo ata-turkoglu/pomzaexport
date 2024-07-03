@@ -21,11 +21,11 @@ export default function Mine() {
     }, [mineId]);
     return (
         <div className="flex flex-col h-fit w-full items-center overflow-scroll">
-            <div className="h-3/4 overflow-hidden relative">
+            <div className="h-fit overflow-hidden relative">
                 <ImgCarousel images={mineImages} />
                 <h1
                     className="absolute text-white text-6xl w-fit flex justify-center"
-                    style={{ top: "45%", left: 0, right: 0, margin: "auto" }}
+                    style={{ top: "75%", left: "5%", margin: "auto" }}
                 >
                     {header}
                 </h1>

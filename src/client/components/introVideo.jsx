@@ -10,7 +10,7 @@ export default function IntroVideo() {
                     autoPlay={true}
                     muted
                     style={{
-                        filter: "brightness(50%)",
+                        filter: "brightness(70%)",
                         zIndex: 0,
                     }}
                 >

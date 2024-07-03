@@ -1,21 +1,18 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./css/facilityBanner.css";
+import minesJSON from "../../data/mines.json";
+import productsJSON from "../../data/products.json";
 
-export function ProductContainer({ img, name, link }) {}
-
-export default function FacilityBanner({
-    keyNum,
-    mainImg,
-    direction,
-    header,
-    content,
-    children,
-}) {
-    const [products, setProducts] = useState();
+export default function FacilityBanner({ mineId, direction, children }) {
+    const navigate = useNavigate();
+    const [products, setProducts] = useState([]);
     const [mobileView, setMobileView] = useState(false);
     const [showingImage, setShowingImage] = useState(false);
     const [imgUrl, setImgUrl] = useState(null);
+    const [header, setHeader] = useState("");
+    const [content, setContent] = useState("");
+    const [mineBgImage, setMineBgImage] = useState(null);
 
     const mouseOver = (e) => {
         if (e.target.src) {
@@ -32,42 +29,52 @@ export default function FacilityBanner({
     };
 
     useLayoutEffect(() => {
+        const data = minesJSON.find((itm) => itm.id == mineId);
+        setHeader(data.name.tr);
+        setContent(data.info.tr);
+        setMineBgImage(data.mineBgImage);
         setShowingImage(false);
+
         if (window.innerWidth < 768) {
             setMobileView(true);
         }
-        const list = children.map((item, index) => {
-            const { img, name, link } = item.props;
-            return (
-                <div
-                    key={index}
-                    onClick={() => {
-                        /*link*/
-                    }}
-                    className="relative cursor-pointer hover:-translate-y-2 duration-300"
-                    style={{
-                        width: "150px",
-                        height: "120px",
-                    }}
-                    onMouseOver={mouseOver}
-                    onMouseLeave={mouseLeave}
-                >
-                    <img src={img} className="w-full h-full object-contain" />
-                    <span
-                        className="absolute inset-x-0 mx-auto w-3/4 bg-white text-center shadow-lg capitalize"
-                        style={{ bottom: "-10px", border: "1px solid grey" }}
-                    >
-                        {name}
-                    </span>
-                </div>
-            );
-        });
 
+        const list = productsJSON
+            .filter((item) => item.facilityId == mineId)
+            .map((item, index) => {
+                const { id, name, image } = item;
+                return (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            /* navigate("/product/" + id) */
+                        }}
+                        className="relative cursor-pointer hover:-translate-y-2 w-full h-full md:w-44 md:h-40 duration-300 overflow-hidden md:overflow-visible"
+                        onMouseOver={mouseOver}
+                        onMouseLeave={mouseLeave}
+                        style={{ border: "1px solid black" }}
+                    >
+                        <img
+                            src={image}
+                            className="w-full h-full object-cover"
+                        />
+                        <span
+                            className="hidden md:block absolute inset-x-0 mx-auto w-3/4 bg-white text-center shadow-lg capitalize"
+                            style={{
+                                bottom: "-10px",
+                                border: "1px solid grey",
+                            }}
+                        >
+                            {name.tr}
+                        </span>
+                    </div>
+                );
+            });
         setProducts(list);
-    }, []);
+    }, [mineId]);
 
     useEffect(() => {
-        const el = document.getElementById("showImage" + keyNum);
+        const el = document.getElementById("showImage" + mineId);
         if (showingImage) {
             el.classList.remove("leaveAnim");
             el.classList.add("enterAnim");
@@ -92,7 +99,7 @@ export default function FacilityBanner({
             <div className="h-full w-full md:h-full md:w-1/2 relative">
                 <img
                     className="h-full w-full object-cover z-0 scale"
-                    src={mainImg}
+                    src={mineBgImage}
                     style={{
                         filter: mobileView
                             ? "brightness(60%)"
@@ -103,17 +110,19 @@ export default function FacilityBanner({
                 {/* info */}
                 <div
                     id="info"
-                    className="text-white md:text-[#010851] absolute mx-auto left-0 right-0 z-10 h-1/2 w-11/12 md:h-1/2 md:w-full bg-transparent md:bg-white flex flex-col p-4 md:p-7 overflow-hidden"
+                    className="text-white text-justify md:text-[#010851] absolute mx-auto left-0 right-0 z-10 h-1/2 w-11/12 md:h-1/2 md:w-full bg-transparent md:bg-white flex flex-col p-4 md:p-7 overflow-scroll md:overflow-hidden"
                     style={{
                         boxShadow: mobileView ? "none" : "0 0 10px grey",
-                        top: mobileView ? "25%" : "130px",
+                        top: mobileView ? "10%" : "130px",
                         left: !mobileView
                             ? direction == "right"
                                 ? "-170%"
                                 : "85%"
                             : "",
                         opacity: mobileView ? ".95" : "1",
-                        border: mobileView ? "none" : "1px solid #010851",
+                        border: mobileView
+                            ? "1px solid white"
+                            : "1px solid #010851",
                     }}
                 >
                     <div className="h-full flex flex-col justify-between">
@@ -127,11 +136,13 @@ export default function FacilityBanner({
                         </div>
                         <div className="w-full flex items-center justify-end">
                             <Link
-                                className="cursor-pointer drop-shadow p-3"
-                                to={"/mine/" + keyNum}
+                                className="cursor-pointer drop-shadow p-3 infoLink duration-200"
+                                to={"/mine/" + mineId}
                                 style={{
-                                    border: "1px solid #010851",
-                                    boxShadow: "0 0 10px grey",
+                                    border: "1px solid",
+                                    borderColor: mobileView
+                                        ? "white"
+                                        : "#010851",
                                 }}
                             >
                                 Detaylı Bilgi
@@ -139,7 +150,7 @@ export default function FacilityBanner({
                         </div>
                     </div>
                     <div
-                        id={"showImage" + keyNum}
+                        id={"showImage" + mineId}
                         className="absolute left-0 top-0 w-full h-full bg-black z-20 hidden"
                     >
                         <img
@@ -152,9 +163,9 @@ export default function FacilityBanner({
 
             {/* products */}
             <div
-                className="absolute px-6 w-full h-fit flex items-center"
+                className="absolute md:flex md:items-center px-6 w-full h-fit grid grid-cols-3 gap-1 overflow-hidden md:overflow-visible"
                 style={{
-                    top: mobileView ? "83%" : "75%",
+                    top: mobileView ? "65%" : "75%",
                     justifyContent: direction == "left" ? "end" : "start",
                 }}
             >

@@ -9,6 +9,10 @@
     animation: scaleImage 40s linear alternate infinite;
 }
 
+.infoLink:hover{
+    box-shadow: 0 0 10px grey;
+}
+
 @keyframes scaleImage {
     from {
         /* object-position: 30%; */

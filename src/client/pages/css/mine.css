@@ -10,7 +10,7 @@
     margin: auto;
     opacity: 0;
     filter: blur(4px);
-    animation: fade-in 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
     font-size: 2rem;
 }
 
@@ -19,8 +19,12 @@
 }
 
 @keyframes fade-in{
+    0%{
+        transform: translateY(100%);
+    }
     100% {
        opacity: 1;
        filter: none;
+       transform: translateY(0);
     }
 }

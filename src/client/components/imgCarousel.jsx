@@ -5,7 +5,7 @@ export default function ImgCarousel({ images }) {
         <Carousel
             autoplay={true}
             loop={true}
-            style={{ height: "50vh", minHeight: "50vh" }}
+            style={{ height: "70vh", minHeight: "70vh" }}
         >
             {images.map((img, key) => {
                 return (
@@ -15,7 +15,7 @@ export default function ImgCarousel({ images }) {
                             className="h-full w-full object-cover"
                             loading="lazy"
                             style={{
-                                filter: "brightness(50%)",
+                                filter: "brightness(75%)",
                             }}
                         />
                     </div>
