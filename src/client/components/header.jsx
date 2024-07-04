@@ -60,10 +60,7 @@ function Header({ toBottom }) {
                         </svg>
                     </button>
                 </div>
-                <div
-                    id="s"
-                    className="hidden md:flex md:items-center space-x-4 h-full"
-                >
+                <div className="hidden md:flex md:items-center space-x-4 h-full">
                     <Link
                         to="/"
                         className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item"
@@ -72,12 +69,12 @@ function Header({ toBottom }) {
                     </Link>
                     <span className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item">
                         İşletmelerimiz
-                        <ul className="nav-list">
+                        <ul className="nav-list pb-3">
                             {mines.map((item, key) => {
                                 return (
                                     <li
                                         key={key}
-                                        className="text-md text-white w-full px-6 pb-5 duration-200 z-40"
+                                        className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
                                         onClick={() =>
                                             navigate("/mine/" + item.id)
                                         }
@@ -90,7 +87,7 @@ function Header({ toBottom }) {
                     </span>
                     <span className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item">
                         Ürünlerimiz
-                        <ul className="nav-list">
+                        <ul className="nav-list pb-3">
                             {products.map((item, key) => {
                                 return (
                                     <li

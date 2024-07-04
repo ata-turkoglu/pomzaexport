@@ -4,12 +4,12 @@
 }
 
 .nav-item:hover{
-    background: rgba(49, 49, 49, 0.618);
+    background: rgba(50, 50, 50, 0.9);
 }
 .nav-list{
     display: none;
     position: absolute;
-    background: rgba(49, 49, 49, 0.618);
+    background: rgba(50, 50, 50, 0.9);
 }
 
 .nav-link:hover .nav-list{

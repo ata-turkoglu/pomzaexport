@@ -46,9 +46,9 @@ export default function FacilityBanner({ mineId, direction, children }) {
                 return (
                     <div
                         key={index}
-                        onClick={() => {
-                            /* navigate("/product/" + id) */
-                        }}
+                        onClick={() =>
+                            !mobileView && navigate("/product/" + id)
+                        }
                         className="relative cursor-pointer hover:-translate-y-2 w-full h-full md:w-44 md:h-40 duration-300 overflow-hidden md:overflow-visible"
                         onMouseOver={mouseOver}
                         onMouseLeave={mouseLeave}
@@ -94,18 +94,21 @@ export default function FacilityBanner({ mineId, direction, children }) {
             className="h-screen w-full flex md:items-center relative"
             style={{
                 flexDirection: direction == "right" ? "row-reverse" : "row",
+                background: "rgba(70,70,70,.8)",
             }}
         >
             <div className="h-full w-full md:h-full md:w-1/2 relative">
-                <img
-                    className="h-full w-full object-cover z-0 scale"
-                    src={mineBgImage}
-                    style={{
-                        filter: mobileView
-                            ? "brightness(60%)"
-                            : "brightness(80%)",
-                    }}
-                ></img>
+                <div className="h-full w-full overflow-hidden">
+                    <img
+                        className="h-full w-full object-cover z-0 scale"
+                        src={mineBgImage}
+                        style={{
+                            filter: mobileView
+                                ? "brightness(60%)"
+                                : "brightness(80%)",
+                        }}
+                    ></img>
+                </div>
 
                 {/* info */}
                 <div
@@ -160,6 +163,24 @@ export default function FacilityBanner({ mineId, direction, children }) {
                     </div>
                 </div>
             </div>
+            {!mobileView && (
+                <div className="h-full w-1/2 relative">
+                    <img
+                        className="w-full h-full"
+                        src="/assets/common/pattern.jpg"
+                    ></img>
+                    <div
+                        className="absolute w-full h-full left-0 top-0"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(to bottom, #03337A,#ffffff)",
+                            backgroundImage:
+                                "linear-gradient(to bottom, #252525, #555555, #8a8a8a, #c3c3c3, #ffffff)",
+                            opacity: ".8",
+                        }}
+                    ></div>
+                </div>
+            )}
 
             {/* products */}
             <div

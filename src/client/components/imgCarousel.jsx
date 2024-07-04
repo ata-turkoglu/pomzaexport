@@ -5,7 +5,9 @@ export default function ImgCarousel({ images }) {
         <Carousel
             autoplay={true}
             loop={true}
-            style={{ height: "70vh", minHeight: "70vh" }}
+            navigation={() => {
+                return <span></span>;
+            }}
         >
             {images.map((img, key) => {
                 return (
