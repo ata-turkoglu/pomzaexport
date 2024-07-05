@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/header.jsx";
 import Footer from "./components/footer.jsx";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 function Client() {
+    const route = useLocation();
+    const [footerState, setFooterState] = useState();
     const toBottom = () => {
         window.scrollBy({
             top: 3000,
@@ -11,15 +13,21 @@ function Client() {
             behavior: "smooth",
         });
     };
+
+    useEffect(() => {
+        route.pathname == "/" ? setFooterState(false) : setFooterState(true);
+    }, [route]);
     return (
-        <div className="flex flex-col">
-            <div className="flex flex-col h-screen overflow-hidden">
-                <Header toBottom={toBottom} />
-                <Outlet />
+        <div className="flex flex-col overflow-hidden">
+            <div className="flex flex-col h-max overflow-hidden">
+                <Header toBottom={toBottom} bgTransparent={footerState} />
+                <Outlet className="h-max" />
             </div>
-            <div className="w-full">
-                <Footer />
-            </div>
+            {footerState && (
+                <div className="w-full">
+                    <Footer />
+                </div>
+            )}
         </div>
     );
 }

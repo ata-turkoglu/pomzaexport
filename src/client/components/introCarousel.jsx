@@ -5,13 +5,16 @@ export function IntroCarousel() {
         window.scrollBy({ top: "2000", behavior: "smooth" });
     };
     return (
-        <Carousel autoplay={true} loop={true}>
+        <Carousel autoplay={true} loop={true} className="h-screen">
             <div className="relative h-full w-full">
                 <img
                     src="/assets/carousel/1.jpg"
                     alt="image 1"
                     className="h-full w-full object-cover"
                     loading="lazy"
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -41,6 +44,12 @@ export function IntroCarousel() {
                     alt="image 2"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -70,6 +79,12 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -99,6 +114,12 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -128,6 +149,12 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -157,6 +184,12 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -186,6 +219,12 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -215,6 +254,12 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
+<<<<<<< HEAD
+=======
+                    style={{
+                        filter: "brightness(50%)",
+                    }}
+>>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
