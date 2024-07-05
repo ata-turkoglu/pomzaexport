@@ -13,6 +13,7 @@ export default function IntroVideo() {
                         filter: "brightness(70%)",
                         zIndex: 0,
                     }}
+                    loop={true}
                 >
                     <source src="/assets/video/pmzaltin.mp4" type="video/mp4" />
                 </video>

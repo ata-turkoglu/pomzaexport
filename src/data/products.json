@@ -13,6 +13,7 @@
             "tr": "Kuyumculuk, kaplama, süsleme, elektrik & elektronik, uzay sanayi, tıp, para yapımı, külçe stokları, tekstil vb gibi çok geniş kullanım alanına sahip bir cevherdir.",
             "en": ""
         },
+        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
             "chemicalFormula": "Au",
@@ -40,6 +41,7 @@
             "tr": "Seramik, cam, yapı kimyasalı, suni granit, elektronik, deterjan, boya, zımpara, dolgu ve sondaj, Tekstil, Arıtma tesisleri, yüzey temizleme (kumlama-raspa), yapı malzemeleri, kimya sanayi, akvaryum kumu, kompoze inşaat elemanları, söve imalatı, prekast sistemlerde vb gibi bir çok alanda.",
             "en": ""
         },
+        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
             "chemicalFormula": "SiO2",
@@ -53,8 +55,20 @@
         "name": { "tr": "Rutil", "en": "Rutile" },
         "image": "/assets/products/rutile.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": {
+            "tr": [
+                "2,5 mm kadar istenilen boyutlarda",
+                "Mikronize ve granül halinde",
+                "Standart, ürün kalitesinde değişim olmayan",
+                "3 kat kraft torba ve big bag ambalajda"
+            ],
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Kaynak elektrotları ve boya sanayi için Rutil üretimi",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
             "chemicalFormula": "TiO2",
@@ -76,6 +90,7 @@
             "tr": "Beton, harç, asfalt gibi sağlam kütle üretimlerinde asit, baz, tuz ve aşınmaya dayanıklı beton imalatlarında kullanılmaktadır.",
             "en": ""
         },
+        "productVariety": { "tr": "", "en": "" },
         "production": ""
     },
     {
@@ -84,8 +99,20 @@
         "name": { "tr": "Garnet", "en": "Garnet" },
         "image": "/assets/products/garnet.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": {
+            "tr": [
+                "Sadece ürüne özel, dış etkenlerden koruyucu üretim (çift elemeli proses)",
+                "Standart kalitede üretim",
+                "Tıkanma yapmayan ürün",
+                "3 kat kraft torba ambalaj"
+            ],
+            "en": ""
+        },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": {
+            "tr": "80, 120, 180, 200 mesh ve kumlama üretimi",
+            "en": ""
+        },
         "production": "",
         "technicalInfo": {
             "chemicalFormula": "X3Y2(SiO4)3",
@@ -107,6 +134,7 @@
             "tr": "Döküm, tekstil, arıtma tesisleri, yüzey temizleme (kumlama-raspa), yapı malzemleri, kimya sanayi, cam kumlama, spor alanları, akvaryum kumu, pist kumu, söve imalatı, prekast sistemlerde, boru imalatı vb gibi bir çok alanda.",
             "en": ""
         },
+        "productVariety": { "tr": "", "en": "" },
         "production": ""
     },
     {
@@ -115,8 +143,9 @@
         "name": { "tr": "Hematit", "en": "Hematite" },
         "image": "/assets/products/hematite.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
             "chemicalFormula": "Fe2O3",
@@ -130,34 +159,39 @@
         "name": { "tr": "Perlit", "en": "Perlite" },
         "image": "/assets/products/perlite.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": {
+            "tr": [
+                "Tozsuzdur",
+                "İdeal tane boyutu ve gözenek yapısına sahiptir, ileri teknoloji ile üretilir.",
+                "Sterildir, hastalıklardan aridir.",
+                "İnorganiktir – hastalık taşımaz ve yaymaz organiktir.",
+                "Uzun ömürlüdür.",
+                "%100 yerlidir.",
+                "Bitki sağlığına temel oluşturur.",
+                "Kök izolasyonu sağlar, kök dostudur.",
+                "Tüm bitki çeşitlerinde yüksek verimlilik elde edilir. Çeşitli yetiştirme ortamlarına uyumludur.",
+                "%100 Homojen ve standart kalite Fiyat/Performans tatmini sağlar.",
+                "Erken hasat almayı sağlar.",
+                "Tarımdaki başarısı ispatlıdır.",
+                "Satış sonrası desteklidir.",
+                "Sulama ihtiyacını azaltır.",
+                "Sterilizasyon sonrası tekrar kullanılabilir Ürün kalitesi standarttır.",
+                "Kullanıma hazır ambalajda teslim.",
+                "Tam zamanında teslim.",
+                "Hollanda başta olmak üzere birçok ülkeye ihracat yapılmaktadır."
+            ],
+            "en": ""
+        },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": {
+            "tr": "Her kalibrasyonda tasnif edilmiş perlit, genleştirilmiş perlit ve perlitten mamul ürünlerin dünya standartlarında ileri teknoloji ile üretilmesinin yanında kesintisiz Ar-Ge ve İş-Ge faaliyetlerine devam etmekteyiz.",
+            "en": ""
+        },
         "production": "",
         "technicalInfo": {
             "gravity": "~1,1 gr/cm3",
             "hardness": "2-2.5 Mohs"
-        },
-        "a": [
-            "Tozsuzdur",
-            "İdeal tane boyutu ve gözenek yapısına sahiptir, ileri teknoloji ile üretilir.",
-            "Sterildir, hastalıklardan aridir.",
-            "İnorganiktir – hastalık taşımaz ve yaymaz organiktir.",
-            "Uzun ömürlüdür.",
-            "%100 yerlidir.",
-            "Bitki sağlığına temel oluşturur.",
-            "Kök izolasyonu sağlar, kök dostudur.",
-            "Tüm bitki çeşitlerinde yüksek verimlilik elde edilir. Çeşitli yetiştirme ortamlarına uyumludur.",
-            "%100 Homojen ve standart kalite Fiyat/Performans tatmini sağlar.",
-            "Erken hasat almayı sağlar.",
-            "Tarımdaki başarısı ispatlıdır.",
-            "Satış sonrası desteklidir.",
-            "Sulama ihtiyacını azaltır.",
-            "Sterilizasyon sonrası tekrar kullanılabilir Ürün kalitesi standarttır.",
-            "Kullanıma hazır ambalajda teslim.",
-            "Tam zamanında teslim.",
-            "Hollanda başta olmak üzere birçok ülkeye ihracat yapılmaktadır."
-        ],
-        "b": "Her kalibrasyonda tasnif edilmiş perlit, genleştirilmiş perlit ve perlitten mamul ürünlerin dünya standartlarında ileri teknoloji ile üretilmesinin yanında kesintisiz Ar-Ge ve İş-Ge faaliyetlerine devam etmekteyiz."
+        }
     },
     {
         "id": 8,
@@ -173,6 +207,7 @@
             "tr": "Pomza, dünyada halen elliden fazla endüstriyel alanda farklı amaçlarda kullanım imkanı bulmaktadır. Başlıca kullanım alanları inşaat, sıva, şap, seramik, tarım, tekstil, kozmetik, aşındırıcı, cila, boya, kimya sanayiinde, çatı ve dekoratif kaplama elemanları üretimi, çimento üretiminde puzzolonik malzeme olarak kullanılmaktadır.",
             "en": ""
         },
+        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
             "gravity": "~0.3 gr/cm3",
@@ -193,6 +228,7 @@
             "tr": "Halihazırda üretimini yapmış olduğumuz korund büyük ölçüde yüzey sertleştirici, zımpara, yüzey temizleme (kumlama-raspa), yapı malzemeleri vb alanlarda kullanılmaktadır.",
             "en": ""
         },
+        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
             "chemicalFormula": "Al2O3",
@@ -206,8 +242,16 @@
         "name": { "tr": "Hazır Beton", "en": "Ready Mixed Concrete" },
         "image": "/assets/mineImages/sart/8.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": {
+            "tr": [
+                "İstenilen beton sınıflarında",
+                "TSE standartlarına uygun",
+                "90 m3 saat kapasitesiyle hazır beton üretimi"
+            ],
+            "en": ""
+        },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
         "production": ""
     },
     {
@@ -216,8 +260,9 @@
         "name": { "tr": "Bims Blok", "en": "Bims Block" },
         "image": "/assets/products/bims-blok.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
         "production": ""
     },
     {
@@ -226,8 +271,9 @@
         "name": { "tr": "Yapı Elemanları", "en": "Construction Chemicals" },
         "image": "/assets/products/eilepomex.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
         "production": ""
     },
     {
@@ -236,8 +282,9 @@
         "name": { "tr": "Kil", "en": "Clay" },
         "image": "/assets/products/clay.jpg",
         "images": [],
-        "description": "",
-        "usageAreas": "",
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
         "production": ""
     }
 ]

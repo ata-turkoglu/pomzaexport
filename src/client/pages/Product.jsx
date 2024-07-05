@@ -79,46 +79,76 @@ export default function Product() {
                                 Ürün Bilgileri
                             </AccordionHeader>
                             <AccordionBody className="text-md">
-                                {productData.description.tr}
+                                {typeof productData.description.tr ==
+                                "string" ? (
+                                    productData.description.tr
+                                ) : (
+                                    <ul>
+                                        {productData.description.tr.map(
+                                            (itm, indx) => (
+                                                <li key={indx}>{itm}</li>
+                                            )
+                                        )}
+                                    </ul>
+                                )}
                             </AccordionBody>
                         </Accordion>
-                        <Accordion
-                            open={openAcc2}
-                            animate={CUSTOM_ANIMATION}
-                            className="pt-5"
-                            icon={<Icon id={2} open={openAcc2} />}
-                        >
-                            <AccordionHeader onClick={handleOpenAcc2}>
-                                Ürün Resimleri
-                            </AccordionHeader>
-                            <AccordionBody className="h-full w-full grid grid-cols-3 gap-1 md:gap-0 md:flex md:items-center md:justify-center ">
-                                {productData.images.map((item, indx) => (
-                                    <div
-                                        key={indx}
-                                        className="h-full w-full md:mx-1 cursor-pointer overflow-hidden"
-                                        onClick={() => setSelectedImg(item)}
-                                    >
-                                        <img
-                                            className="w-full h-full object-cover"
-                                            src={item}
-                                        ></img>
-                                    </div>
-                                ))}
-                            </AccordionBody>
-                        </Accordion>
-                        <Accordion
-                            open={openAcc3}
-                            animate={CUSTOM_ANIMATION}
-                            className="pt-5"
-                            icon={<Icon id={3} open={openAcc3} />}
-                        >
-                            <AccordionHeader onClick={handleOpenAcc3}>
-                                Kullanım Alanları
-                            </AccordionHeader>
-                            <AccordionBody className="text-md">
-                                {productData.usageAreas.tr}
-                            </AccordionBody>
-                        </Accordion>
+                        {productData.images.length > 0 && (
+                            <Accordion
+                                open={openAcc2}
+                                animate={CUSTOM_ANIMATION}
+                                className="pt-5"
+                                icon={<Icon id={2} open={openAcc2} />}
+                            >
+                                <AccordionHeader onClick={handleOpenAcc2}>
+                                    Ürün Resimleri
+                                </AccordionHeader>
+                                <AccordionBody className="h-full w-full grid grid-cols-3 gap-1 md:gap-0 md:flex md:items-center md:justify-center ">
+                                    {productData.images.map((item, indx) => (
+                                        <div
+                                            key={indx}
+                                            className="h-full w-full md:mx-1 cursor-pointer overflow-hidden"
+                                            onClick={() => setSelectedImg(item)}
+                                        >
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item}
+                                            ></img>
+                                        </div>
+                                    ))}
+                                </AccordionBody>
+                            </Accordion>
+                        )}
+                        {productData.usageAreas.tr && (
+                            <Accordion
+                                open={openAcc3}
+                                animate={CUSTOM_ANIMATION}
+                                className="pt-5"
+                                icon={<Icon id={3} open={openAcc3} />}
+                            >
+                                <AccordionHeader onClick={handleOpenAcc3}>
+                                    Kullanım Alanları
+                                </AccordionHeader>
+                                <AccordionBody className="text-md">
+                                    {productData.usageAreas.tr}
+                                </AccordionBody>
+                            </Accordion>
+                        )}
+                        {productData.productVariety.tr && (
+                            <Accordion
+                                open={openAcc3}
+                                animate={CUSTOM_ANIMATION}
+                                className="pt-5"
+                                icon={<Icon id={3} open={openAcc3} />}
+                            >
+                                <AccordionHeader onClick={handleOpenAcc3}>
+                                    Ürün Çeşitleri
+                                </AccordionHeader>
+                                <AccordionBody className="text-md">
+                                    {productData.productVariety.tr}
+                                </AccordionBody>
+                            </Accordion>
+                        )}
                         {productData.technicalInfo && (
                             <Accordion
                                 open={openAcc4}

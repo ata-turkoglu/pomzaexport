@@ -32,9 +32,6 @@ function Home() {
                     ></FacilityBanner>
                 </SectionPart>
                 <SectionPart>
-                    <IntroCarousel />
-                </SectionPart>
-                <SectionPart>
                     <Footer hFull={true} />
                 </SectionPart>
             </SectionScroller>

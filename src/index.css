@@ -9,3 +9,7 @@
     user-select: none;
     font-family: 'Play', sans-serif;
   }
+
+  .d-shadow{
+    filter: drop-shadow(0 0 10 black);
+  }

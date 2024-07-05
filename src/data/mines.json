@@ -7,8 +7,8 @@
         },
         "mineBgImage": "/assets/common/pit.jpg",
         "images": [
-            "/assets/mineImages/sart/1.jpg",
             "/assets/mineImages/sart/2.jpg",
+            "/assets/mineImages/sart/1.jpg",
             "/assets/mineImages/sart/3.jpg",
             "/assets/mineImages/sart/4.jpg",
             "/assets/mineImages/sart/5.jpg",
@@ -98,17 +98,8 @@
             "tr": "Küner Maden İşletmemiz",
             "en": ""
         },
-        "mineBgImage": "/assets/common/kuner.jpg",
-        "images": [
-            "/assets/mineImages/sart/1.jpg",
-            "/assets/mineImages/sart/2.jpg",
-            "/assets/mineImages/sart/3.jpg",
-            "/assets/mineImages/sart/4.jpg",
-            "/assets/mineImages/sart/5.jpg",
-            "/assets/mineImages/sart/6.jpg",
-            "/assets/mineImages/sart/7.jpg",
-            "/assets/mineImages/sart/8.jpg"
-        ],
+        "mineBgImage": "/assets/mineImages/kuner/1.jpg",
+        "images": ["/assets/mineImages/kuner/1.jpg"],
         "info": {
             "tr": "Pomza Export A.Ş. Salihli Sart bölgesinde kurduğu plaser madeni işletmesi %100 yerli sermaye ve teknoloji kullanılmak suretiyle sektörde ilk altın üreten yerli firma olmuştur. Madencilik sektöründe 40 yılı aşkın elde ettiği tecrübesini inşaat sektörüne ileri teknoloji ve çevreci malzemeler üretmekte kullanan POMZAEXPORT A.Ş. bu maksatla; PERSAN markasıyla perlit beton kiremidi ve EILE POMEX markasıyla ileri teknoloji yapı kimyasallarını inşaat sektörüne kazandırmıştır. Şirketin hedefi; faaliyette bulunduğumuz sektörlerde pazarın beklentilerine cevap verebilecek; koşulsuz müşteri memnuniyeti veren, kaliteli, çevreci, ileri teknoloji ürünler üretmek ve kendini sürekli yinelemektir.",
             "en": ""
