@@ -5,6 +5,7 @@ import Products from "./client/pages/Products";
 import Product from "./client/pages/Product";
 import About from "./client/pages/About";
 import Docs from "./client/pages/Docs";
+import Facilities from "./client/pages/Facilities";
 import Contact from "./client/pages/Contact";
 import Client from "./client/Client";
 import Mine from "./client/pages/Mine";
@@ -22,6 +23,7 @@ function App() {
                     ></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/docs" element={<Docs />}></Route>
+                    <Route path="/facilities" element={<Facilities />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="/mine/:mineId" element={<Mine />}></Route>
                 </Route>

@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import productsJSON from "../../data/products.json";
+import React from "react";
+import minesJSON from "../../data/mines.json";
 
-function Products() {
+function Facilities() {
     return (
         <div className="h-full w-full flex flex-col">
             <div className="h-16 w-100 bg-[#252525]"></div>
-            <div className="grid grid-cols-2 gap-2 p-2">
-                {productsJSON.map((item, index) => (
-                    <div key={index} className="w-full h-full relative">
+            <div className="flex flex-col p-2">
+                {minesJSON.map((item, index) => (
+                    <div key={index} className="w-full h-full relative mb-2">
                         <img
                             src={item.image}
                             className="w-full h-full objecj-cover"
@@ -30,4 +30,4 @@ function Products() {
     );
 }
 
-export default Products;
+export default Facilities;

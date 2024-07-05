@@ -135,10 +135,10 @@ export default function Mine() {
                             ></img>
                             {mobileView && (
                                 <span
-                                    className="text-white z-10"
+                                    className="text-white z-10 text-center"
                                     style={{
                                         display: mobileView ? "block" : "",
-                                        fontSize: mobileView ? "1.2rem" : "",
+                                        fontSize: mobileView ? "1.5rem" : "",
                                     }}
                                 >
                                     {item.name.tr}
