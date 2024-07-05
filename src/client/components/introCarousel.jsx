@@ -44,12 +44,9 @@ export function IntroCarousel() {
                     alt="image 2"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -79,12 +76,9 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -114,12 +108,9 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -149,12 +140,9 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -184,12 +172,9 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -219,12 +204,9 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">
@@ -254,12 +236,9 @@ export function IntroCarousel() {
                     alt="image 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
-<<<<<<< HEAD
-=======
                     style={{
                         filter: "brightness(50%)",
                     }}
->>>>>>> development
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center">
                     <div className="w-3/4 text-center md:w-2/4">

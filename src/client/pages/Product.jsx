@@ -61,7 +61,7 @@ export default function Product() {
                 <div className="flex flex-col min-h-screen h-fit w-full items-center">
                     <div className="h-[50vh] w-full relative">
                         <img
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover brightness-90"
                             src={selectedImg}
                         ></img>
                         <h1 className="w-full text-4xl font-bold text-white absolute left-0 flex justify-center bottom-0 pb-5">
