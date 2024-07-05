@@ -3,21 +3,14 @@ import React from "react";
 function About() {
     return (
         <div
-            className="flex flex-col justify-center items-center h-screen relative overflow-hidden"
+            className="flex flex-col justify-center items-center h-fit relative overflow-hidden"
             style={{
-                backgroundImage: "url(/assets/common/pattern.jpg)",
+                background:
+                    "url(/assets/common/pattern.jpg), rgba(25,25,25,.5)",
+                backgroundBlendMode: "multiply",
             }}
         >
-            <div
-                className="absolute w-full h-full left-0 right-0"
-                style={{
-                    /* backgroundImage:
-                        "linear-gradient(to bottom, #252525, #555555, #8a8a8a, #c3c3c3, #ffffff)", */
-                    backgroundColor: "#252525",
-                    opacity: ".7",
-                }}
-            ></div>
-            <div className="md:w-2/3 w-full z-10 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 absolute left-0 right-0 top-0 h-full overflow-scroll">
+            <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
                 <p className="mb-2">
                     Şirketimiz, Erzincan da 1969 yılında perlit madeni
                     işletmesiyle başladığı endüstriyel hammadde üretimini bugün;

@@ -37,7 +37,7 @@ function Header({ toBottom }) {
                 {/* Mobile Menu Icon */}
                 <div className="md:hidden flex items-center">
                     <button
-                        onClick={toBottom}
+                        onClick={() => setIsOpen(true)}
                         type="button"
                         className="text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
                     >
@@ -112,8 +112,8 @@ function Header({ toBottom }) {
                 </div>
             </div>
             {/* Mobile Menu */}
-            {false && (
-                <div className="fixed top-0 right-0 h-full w-64 bg-[#010851] z-50 flex flex-col items-center p-4 text-white md:hidden">
+            {isOpen && (
+                <div className="fixed top-0 right-0 h-full w-64 bg-[#29292e] z-50 flex flex-col items-center p-4 text-white md:hidden duration-200">
                     <button
                         onClick={() => setIsOpen(false)}
                         type="button"

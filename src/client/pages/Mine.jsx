@@ -71,7 +71,7 @@ export default function Mine() {
     return (
         <div className="flex flex-col h-fit w-full items-center overflow-scroll">
             <div
-                className="h-fit overflow-hidden relative"
+                className="h-fit w-full overflow-hidden relative"
                 style={{ height: mobileView ? "50vh" : "70vh" }}
             >
                 <ImgCarousel images={mineImages} />
@@ -92,9 +92,11 @@ export default function Mine() {
                         className="w-full h-full object-cover"
                         src={imgUrl}
                     ></img>
-                    <span className="text-white z-10 absolute left-10 bottom-10 text-6xl">
-                        {productName}
-                    </span>
+                    {!mobileView && (
+                        <span className="text-white z-10 absolute left-10 bottom-10 text-6xl">
+                            {productName}
+                        </span>
+                    )}
                     {mobileView && (
                         <span
                             className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 text-white"
@@ -131,15 +133,17 @@ export default function Mine() {
                                 className="w-full h-full object-cover"
                                 src={item.image}
                             ></img>
-                            {/* <span
-                                className="text-white z-10"
-                                style={{
-                                    display: mobileView ? "block" : "",
-                                    fontSize: mobileView ? "1.2rem" : "",
-                                }}
-                            >
-                                {item.name.tr}
-                            </span> */}
+                            {mobileView && (
+                                <span
+                                    className="text-white z-10"
+                                    style={{
+                                        display: mobileView ? "block" : "",
+                                        fontSize: mobileView ? "1.2rem" : "",
+                                    }}
+                                >
+                                    {item.name.tr}
+                                </span>
+                            )}
                         </div>
                     );
                 })}

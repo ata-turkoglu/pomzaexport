@@ -63,17 +63,8 @@
             "tr": "Yeniköy Maden İşletmemiz",
             "en": ""
         },
-        "mineBgImage": "/assets/common/yenikoy.jpg",
-        "images": [
-            "/assets/mineImages/sart/1.jpg",
-            "/assets/mineImages/sart/2.jpg",
-            "/assets/mineImages/sart/3.jpg",
-            "/assets/mineImages/sart/4.jpg",
-            "/assets/mineImages/sart/5.jpg",
-            "/assets/mineImages/sart/6.jpg",
-            "/assets/mineImages/sart/7.jpg",
-            "/assets/mineImages/sart/8.jpg"
-        ],
+        "mineBgImage": "/assets/mineImages/yenikoy/1.jpg",
+        "images": ["/assets/mineImages/yenikoy/1.jpg"],
         "info": {
             "tr": "Türkiye’de Tarım Perliti konusunda öncü olan Eti Maden İşletmelerinin İzmir Yeniköy Perlit Maden Sahasını şirketimiz POMZA Export Madencilik San. Ve Tic. A.Ş. devir almıştır. Perlit konusunda 1969 yılından günümüze kesintisiz çalışmaları devam eden şirketimiz sahip olduğu tecrübe ve bilgi ile konu sahada yenilikçi ve endüstriyel işletmecilik yapmaktadır. Hatırı sayılır büyüklük, kalite ve rezerve sahip sahamızda şirketimiz gereken planlamaları yaparak modernizasyon yatırımlarını başlatmış ve 2019 yılında ETİPER markalı perlit ürünlerini müşterilerine sunmaya başlamıştır. Şirketimizin başlatmış olduğu yatırımlar kesintisiz olarak devam etmektedir. Gerek ürün kalitesi gerek ürün çeşitliliği olarak Tarım, İnşaat, Döküm, Gıda, Filtrasyon, Boya sanayileri başta olmak üzere perlitin kullanıldığı her alanda müşteri ihtiyaç ve isteklerine uygun vasıflarda ürün tedariki yapmaktayız. Sahada bulunan GES Santralinden elde edilen elektrik enerjisi ile çevreci ve sürdürülebilirlik esasına göre üretilen perlit ürünlerimiz Yurtiçi ve Yurtdışı pazarlara sunulmaktadır.",
             "en": ""

@@ -25,7 +25,13 @@
         "facilityId": 1,
         "name": { "tr": "Kuvars", "en": "Quartz" },
         "image": "/assets/products/quartz.jpg",
-        "images": [],
+        "images": [
+            "/assets/products/quartz.jpg",
+            "/assets/products/quartz2.jpg",
+            "/assets/products/quartz3.jpg",
+            "/assets/products/quartz4.jpg",
+            "/assets/products/quartz5.jpg"
+        ],
         "description": {
             "tr": "Salihli Kaletepe Mevkiindeki ruhsatlı ocağımızdan çıkarılan kuvars (SiO2) Sardes Kuvars tesislerinde işlenerek yurtiçi ve yurtdışı pazara sunulmaktadır. Her tür granül ve mikronize kuvars üretimi yapılabilen tesissimizde müşteri taleplerine uygun gradasyon ve özellikte üretim gerçekleşmektedir. Yüksek saflıkta üretilen kuvars ürünlerimiz  müşteri beklentilerine uygun titizlikte  üretilmektedir. Değişen sektörel ihtiyaçlara cevap verebilmeyi sağlayan  tam otomatik makine parkı ile üretim yapılan tesisimizde Kraft torba, PP torba, Bigbag ambalaj ile sevkiyat yapılabildiği gibi silobas ile ürün sevkiyatı da gerçekleşmektedir.",
             "en": ""
@@ -208,7 +214,7 @@
         "id": 11,
         "facilityId": 2,
         "name": { "tr": "Bims Blok", "en": "Bims Block" },
-        "image": "/assets/products/bims-blok.png",
+        "image": "/assets/products/bims-blok.jpg",
         "images": [],
         "description": "",
         "usageAreas": "",
