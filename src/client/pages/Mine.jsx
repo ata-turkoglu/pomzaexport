@@ -13,11 +13,13 @@ export default function Mine() {
     const [description, setDescription] = useState("");
     const [mineImages, setMineImages] = useState([]);
     const [mineProducts, setMineProducts] = useState([]);
+    const [productName, setProductName] = useState(null);
     const [imgUrl, setImgUrl] = useState(null);
     const [showingImage, setShowingImage] = useState(false);
     const [linkId, setLinkId] = useState(null);
 
-    const mouseOver = (e) => {
+    const mouseOver = (e, name) => {
+        setProductName(name);
         if (e.target.src) {
             setImgUrl(e.target.src);
             setShowingImage(true);
@@ -28,6 +30,7 @@ export default function Mine() {
     };
 
     const mouseLeave = (e) => {
+        setProductName(null);
         setShowingImage(false);
     };
 
@@ -77,7 +80,6 @@ export default function Mine() {
                     style={{
                         top: mobileView ? "85%" : "80%",
                         left: "5%",
-                        margin: "auto",
                     }}
                 >
                     {header}
@@ -90,6 +92,9 @@ export default function Mine() {
                         className="w-full h-full object-cover"
                         src={imgUrl}
                     ></img>
+                    <span className="text-white z-10 absolute left-10 bottom-10 text-6xl">
+                        {productName}
+                    </span>
                     {mobileView && (
                         <span
                             className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 text-white"
@@ -102,19 +107,19 @@ export default function Mine() {
                 </div>
             </div>
             <div
-                className="w-full py-3 md:py-8 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:flex md:items-center md:justify-center duration-200"
+                className="w-full py-3 md:py-8 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:gap-0 md:flex md:items-center md:justify-center duration-200"
                 style={{ height: mobileView ? "50vh" : "30vh" }}
             >
                 {mineProducts.map((item, key) => {
                     return (
                         <div
                             key={key}
-                            className="w-full h-full md:max-w-max overflow-hidden cursor-pointer md:mr-3 hover:shadow-lg shadow-black duration-200 productContainer relative"
+                            className="w-full h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
                             onClick={() => {
                                 !mobileView && navigate("/product/" + item.id);
                             }}
                             onMouseOver={(e) => {
-                                mouseOver(e);
+                                mouseOver(e, item.name.tr);
                                 setLinkId(item.id);
                             }}
                             onMouseLeave={(e) => {
@@ -126,7 +131,7 @@ export default function Mine() {
                                 className="w-full h-full object-cover"
                                 src={item.image}
                             ></img>
-                            <span
+                            {/* <span
                                 className="text-white z-10"
                                 style={{
                                     display: mobileView ? "block" : "",
@@ -134,7 +139,7 @@ export default function Mine() {
                                 }}
                             >
                                 {item.name.tr}
-                            </span>
+                            </span> */}
                         </div>
                     );
                 })}

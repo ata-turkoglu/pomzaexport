@@ -62,7 +62,7 @@ function Header({ toBottom }) {
                 </div>
                 <div className="hidden md:flex md:items-center space-x-4 h-full">
                     <Link
-                        to="/"
+                        to="/about"
                         className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item"
                     >
                         Hakkımızda
