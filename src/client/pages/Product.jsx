@@ -123,8 +123,10 @@ export default function Product() {
                                             key={indx}
                                             className="h-full w-full md:mx-1 cursor-pointer overflow-hidden"
                                             onClick={() => {
+                                                setOpenAcc1(false);
                                                 setSelectedImg(item);
                                                 setFullView(true);
+                                                window.scrollTo(0, 0);
                                             }}
                                         >
                                             <img

@@ -74,7 +74,7 @@ export default function SectionScroller({ children }) {
                 const deltaY =
                     e.changedTouches[0].clientY - touchStartY.current;
 
-                if (scrollState.current && Math.abs(deltaY) > 200) {
+                if (scrollState.current && Math.abs(deltaY) > 150) {
                     if (deltaY < 0) {
                         children.length - 1 > scrollIndex.current &&
                             ++scrollIndex.current;

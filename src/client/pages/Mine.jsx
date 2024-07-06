@@ -116,7 +116,7 @@ export default function Mine() {
             </div>
             <div
                 className="w-full py-3 md:py-8 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:gap-0 md:flex md:items-center md:justify-center duration-200"
-                style={{ height: mobileView ? "50vh" : "30vh" }}
+                style={{ height: mobileView ? "fit-content" : "30vh" }}
             >
                 {mineProducts.map((item, key) => {
                     return (
