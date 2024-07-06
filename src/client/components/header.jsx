@@ -54,7 +54,7 @@ function Header({ toBottom }) {
     }, []);
 
     return (
-        <nav className="bg-transparent flex items-center fixed z-40 w-full h-16 px-4">
+        <nav className="bg-transparent flex items-center fixed z-40 w-full h-20 px-4">
             <div className="w-full h-full flex justify-between items-center">
                 <a
                     href="/"
@@ -92,14 +92,14 @@ function Header({ toBottom }) {
                         </svg>
                     </button>
                 </div>
-                <div className="hidden md:flex md:items-center space-x-4 h-full">
+                <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white font-extrabold">
                     <Link
                         to="/about"
-                        className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item"
+                        className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item"
                     >
                         Hakkımızda
                     </Link>
-                    <span className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item">
+                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item">
                         İşletmelerimiz
                         <ul className="nav-list pb-3">
                             {mines.map((item, key) => {
@@ -117,7 +117,7 @@ function Header({ toBottom }) {
                             })}
                         </ul>
                     </span>
-                    <span className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item">
+                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item">
                         Ürünlerimiz
                         <ul className="nav-list pb-3">
                             {products.map((item, key) => {
@@ -137,7 +137,7 @@ function Header({ toBottom }) {
                     </span>
                     <Link
                         onClick={toBottom}
-                        className="text-white px-6 py-2 h-full text-md flex items-center font-medium cursor-pointer relative nav-link nav-item"
+                        className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item"
                     >
                         İletişim
                     </Link>

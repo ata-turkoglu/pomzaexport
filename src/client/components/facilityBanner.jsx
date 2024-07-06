@@ -163,6 +163,8 @@ export default function FacilityBanner({ mineId, direction, children }) {
                     </div>
                 </div>
             </div>
+
+            {/* Pattern */}
             {!mobileView && (
                 <div className="h-full w-1/2 relative">
                     <img
@@ -173,9 +175,9 @@ export default function FacilityBanner({ mineId, direction, children }) {
                         className="absolute w-full h-full left-0 top-0"
                         style={{
                             backgroundImage:
-                                "linear-gradient(to bottom, #03337A,#ffffff)",
-                            backgroundImage:
                                 "linear-gradient(to bottom, #252525, #555555, #8a8a8a, #c3c3c3, #ffffff)",
+                            backgroundImage:
+                                "linear-gradient(to bottom, #03337A,#ffffff)",
                             opacity: ".8",
                         }}
                     ></div>
