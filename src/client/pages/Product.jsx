@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import productsJSON from "../../data/products.json";
 import {
@@ -38,6 +38,8 @@ export default function Product() {
     const { productId } = useParams();
     const [productData, setProductData] = useState(null);
     const [selectedImg, setSelectedImg] = useState(null);
+    const [fullView, setFullView] = useState(false);
+    const [mobileView, setMobileView] = useState(false);
 
     const [openAcc1, setOpenAcc1] = useState(true);
     const [openAcc2, setOpenAcc2] = useState(true);
@@ -49,6 +51,13 @@ export default function Product() {
     const handleOpenAcc3 = () => setOpenAcc3((cur) => !cur);
     const handleOpenAcc4 = () => setOpenAcc4((cur) => !cur);
 
+    useLayoutEffect(() => {
+        if (window.innerWidth < 768) {
+            setMobileView(true);
+        }
+        window.scrollTo(0, 0);
+    }, []);
+
     useEffect(() => {
         const data = productsJSON.find((itm) => itm.id == productId);
         setSelectedImg(data.image);
@@ -59,7 +68,12 @@ export default function Product() {
         <div className="h-fit">
             {productData && (
                 <div className="flex flex-col min-h-screen h-fit w-full items-center">
-                    <div className="h-[50vh] w-full relative">
+                    <div
+                        className="w-full relative duration-300"
+                        style={{
+                            height: fullView && !mobileView ? "100vh" : "50vh",
+                        }}
+                    >
                         <img
                             className="w-full h-full object-cover brightness-90"
                             src={selectedImg}
@@ -108,7 +122,10 @@ export default function Product() {
                                         <div
                                             key={indx}
                                             className="h-full w-full md:mx-1 cursor-pointer overflow-hidden"
-                                            onClick={() => setSelectedImg(item)}
+                                            onClick={() => {
+                                                setSelectedImg(item);
+                                                setFullView(true);
+                                            }}
                                         >
                                             <img
                                                 className="w-full h-full object-cover"

@@ -193,8 +193,10 @@ function Header({ toBottom }) {
                         Ürünlerimiz
                     </Link>
                     <Link
-                        to="/contact"
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                            toBottom();
+                            setIsOpen(false);
+                        }}
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
                         İletişim

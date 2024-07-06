@@ -18,10 +18,7 @@ export default function TextTransitions({ children }) {
     const setWords = (item) => {
         return item.props.children.split(" ").map((el, idx) => {
             return (
-                <span
-                    key={idx}
-                    className="tt mr-2 text-white text-2xl md:text-5xl"
-                >
+                <span key={idx} className="tt mr-2 text-white text-5xl">
                     {el}
                 </span>
             );
@@ -52,12 +49,12 @@ export default function TextTransitions({ children }) {
                 const prevEl = document.getElementById(
                     "text" + (children.length - 1)
                 );
-                if (prevEl.style.display == "block") {
+                if (prevEl.style.display == "flex") {
                     prevEl.style.display = "none";
                 }
             }
 
-            document.getElementById("text" + counter).style.display = "block";
+            document.getElementById("text" + counter).style.display = "flex";
 
             if (counter < children.length - 1) {
                 counter++;

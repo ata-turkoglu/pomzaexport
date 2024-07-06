@@ -4,11 +4,11 @@ import { Linkedin, Facebook, Youtube } from "lucide-react";
 function Footer({ hFull = false }) {
     return (
         <div
-            className="bg-[#252525] md:px-10 p-3 max-w-screen-2x1 mx-auto text-white"
+            className="bg-[#252525] md:px-10 p-3 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
             style={{ height: hFull ? "100vh" : "fit-content" }}
         >
             <div className="my-12 flex flex-col md:flex-row gap-10">
-                <div className="md:w-1/2 space-y-8">
+                <div className="md:w-1/3 space-y-8">
                     {!hFull && (
                         <a
                             href="/"
@@ -39,25 +39,33 @@ function Footer({ hFull = false }) {
                     />
                 </div>
                 {/* footer navigations */}
-                <div className="md:w-1/2 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
+                <div className="md:w-2/3 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
+                    {/* Mines */}
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline">Şirketimiz</h4>
+                        <h4 className="text-xl underline">İşletmelerimiz</h4>
                         <ul className="space-y-3">
-                            <a href="/" className="block hover:text-gray-300">
-                                Hakkımızda
+                            <a
+                                href="/mine/1"
+                                className="block hover:text-gray-300"
+                            >
+                                Sart Maden İşletmesi
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
-                                Tarihçemiz
+                            <a
+                                href="/mine/2"
+                                className="block hover:text-gray-300"
+                            >
+                                Yeniköy Maden İşletmesi
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
-                                Tesislerimiz
-                            </a>
-                            <a href="/" className="block hover:text-gray-300">
-                                Markalarımız
+                            <a
+                                href="/mine/3"
+                                className="block hover:text-gray-300"
+                            >
+                                Küner Maden İşletmesi
                             </a>
                         </ul>
                     </div>
 
+                    {/* Products */}
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">Ürünlerimiz</h4>
                         <ul className="space-y-3">
@@ -92,11 +100,18 @@ function Footer({ hFull = false }) {
                                 Bims Blok
                             </a>
                             <a href="/" className="block hover:text-gray-300">
+                                Hazır Beton
+                            </a>
+                            <a href="/" className="block hover:text-gray-300">
+                                Yapı Elemanları
+                            </a>
+                            <a href="/" className="block hover:text-gray-300">
                                 Korund
                             </a>
                         </ul>
                     </div>
 
+                    {/* Address */}
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">
                             İletişim Adreslerimiz
@@ -157,6 +172,7 @@ function Footer({ hFull = false }) {
 
             <hr />
 
+            {/* Social Media */}
             <div className="flex flex-col sm:flex-row gap-8 sm:items-center justify-between my-8">
                 <p>@2024 POMZA EXPORT. Tüm Hakları Saklıdır.</p>
                 <div className="flex items-center space-x-5">

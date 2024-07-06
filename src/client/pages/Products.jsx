@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import productsJSON from "../../data/products.json";
 import { useNavigate } from "react-router-dom";
 
 function Products() {
     const navigate = useNavigate();
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="h-full w-full flex flex-col">
             <div className="h-16 w-100 bg-[#252525]"></div>
@@ -12,7 +17,11 @@ function Products() {
                     <div
                         key={index}
                         className="w-full h-full relative"
-                        onClick={() => navigate("/product/" + item.id)}
+                        onClick={() => {
+                            item.externalLink
+                                ? window.open(item.link, "_blank")
+                                : navigate("/product/" + item.id);
+                        }}
                     >
                         <img
                             src={item.image}

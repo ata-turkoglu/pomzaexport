@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import minesJSON from "../../data/mines.json";
 import { useNavigate } from "react-router-dom";
 
 function Facilities() {
     const navigate = useNavigate();
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="h-full w-full flex flex-col">
             <div className="h-16 w-100 bg-[#252525]"></div>

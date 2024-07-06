@@ -17,6 +17,7 @@ export default function Mine() {
     const [imgUrl, setImgUrl] = useState(null);
     const [showingImage, setShowingImage] = useState(false);
     const [linkId, setLinkId] = useState(null);
+    const [external, setExternal] = useState(false);
 
     const mouseOver = (e, name) => {
         setProductName(name);
@@ -38,7 +39,8 @@ export default function Mine() {
         if (window.innerWidth < 768) {
             setMobileView(true);
         }
-    });
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
         const data = minesJSON.find((itm) => itm.id == mineId);
@@ -101,7 +103,11 @@ export default function Mine() {
                         <span
                             className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 text-white"
                             style={{ border: "1px solid white" }}
-                            onClick={() => navigate("/product/" + linkId)}
+                            onClick={() => {
+                                external
+                                    ? window.open(linkId, "_blank")
+                                    : navigate("/product/" + linkId);
+                            }}
                         >
                             Ürün Sayfasına Git...
                         </span>
@@ -118,11 +124,19 @@ export default function Mine() {
                             key={key}
                             className="w-full h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
                             onClick={() => {
-                                !mobileView && navigate("/product/" + item.id);
+                                !mobileView &&
+                                    (item.externalLink
+                                        ? window.open(item.link, "_blank")
+                                        : navigate("/product/" + item.id));
                             }}
                             onMouseOver={(e) => {
                                 mouseOver(e, item.name.tr);
-                                setLinkId(item.id);
+                                item.externalLink
+                                    ? setExternal(true)
+                                    : setExternal(false);
+                                item.externalLink
+                                    ? setLinkId(item.link)
+                                    : setLinkId(item.id);
                             }}
                             onMouseLeave={(e) => {
                                 mouseLeave(e);

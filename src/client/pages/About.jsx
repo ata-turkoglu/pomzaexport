@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 
 function About() {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div
             className="flex flex-col justify-center items-center h-fit relative overflow-hidden"
