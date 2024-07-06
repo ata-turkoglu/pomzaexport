@@ -47,7 +47,10 @@ export default function FacilityBanner({ mineId, direction, children }) {
                     <div
                         key={index}
                         onClick={() =>
-                            !mobileView && navigate("/product/" + id)
+                            !mobileView &&
+                            (item.externalLink
+                                ? window.open(item.link, "_blank")
+                                : navigate("/product/" + id))
                         }
                         className="relative cursor-pointer hover:-translate-y-2 w-full h-full md:w-44 md:h-40 duration-300 overflow-hidden md:overflow-visible"
                         onMouseOver={mouseOver}
