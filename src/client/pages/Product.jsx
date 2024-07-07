@@ -121,7 +121,7 @@ export default function Product() {
                                     {productData.images.map((item, indx) => (
                                         <div
                                             key={indx}
-                                            className="h-full w-full md:mx-1 cursor-pointer overflow-hidden"
+                                            className="h-full w-full md:max-w-52 md:mx-1 cursor-pointer overflow-hidden"
                                             onClick={() => {
                                                 setOpenAcc1(false);
                                                 setSelectedImg(item);

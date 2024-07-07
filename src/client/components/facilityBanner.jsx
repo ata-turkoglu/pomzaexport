@@ -116,9 +116,9 @@ export default function FacilityBanner({ mineId, direction, children }) {
                 {/* info */}
                 <div
                     id="info"
-                    className="text-white text-justify md:text-[#010851] absolute mx-auto left-0 right-0 z-10 h-1/2 w-11/12 md:h-1/2 md:w-full bg-transparent md:bg-white flex flex-col p-4 md:p-7 overflow-scroll md:overflow-hidden"
+                    className="bg-whitesmoke text-white text-justify md:text-[#010851] absolute mx-auto left-0 right-0 z-10 h-1/2 w-11/12 md:h-1/2 md:w-full bg-transparent md:bg-white flex flex-col p-4 md:p-7 overflow-scroll md:overflow-hidden"
                     style={{
-                        boxShadow: mobileView ? "none" : "0 0 10px grey",
+                        boxShadow: mobileView ? "none" : "0 0 10px grey inset",
                         top: mobileView ? "10%" : "130px",
                         left: !mobileView
                             ? direction == "right"
@@ -126,9 +126,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
                                 : "85%"
                             : "",
                         opacity: mobileView ? ".95" : "1",
-                        border: mobileView
-                            ? "1px solid white"
-                            : "1px solid #010851",
+                        border: mobileView ? "1px solid white" : "none",
                     }}
                 >
                     <div className="h-full flex flex-col justify-between">
@@ -166,6 +164,8 @@ export default function FacilityBanner({ mineId, direction, children }) {
                     </div>
                 </div>
             </div>
+
+            {/* Pattern */}
             {!mobileView && (
                 <div className="h-full w-1/2 relative">
                     <img
@@ -176,9 +176,9 @@ export default function FacilityBanner({ mineId, direction, children }) {
                         className="absolute w-full h-full left-0 top-0"
                         style={{
                             backgroundImage:
-                                "linear-gradient(to bottom, #03337A,#ffffff)",
-                            backgroundImage:
                                 "linear-gradient(to bottom, #252525, #555555, #8a8a8a, #c3c3c3, #ffffff)",
+                            backgroundImage:
+                                "linear-gradient(to bottom, #03337A,#ffffff)",
                             opacity: ".8",
                         }}
                     ></div>
