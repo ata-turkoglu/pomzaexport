@@ -1,6 +1,8 @@
 import React, { useLayoutEffect } from "react";
 import { IntroCarousel } from "../components/introCarousel";
 import IntroVideo from "../components/introVideo";
+import Facilities from "../components/facilities";
+import Brands from "../components/brands";
 import ProductSlider from "../components/productSlider/productSlider";
 import SectionScroller, { SectionPart } from "../components/sectionScroller";
 import FacilityBanner from "../components/facilityBanner";
@@ -12,7 +14,10 @@ function Home() {
     }, []);
     return (
         <div className="flex flex-col h-fit md:min-w-full md:min-h-max">
-            <SectionScroller>
+            <IntroVideo />
+            <Facilities />
+            <Brands />
+            {/* <SectionScroller>
                 <SectionPart>
                     <IntroVideo />
                 </SectionPart>
@@ -37,7 +42,7 @@ function Home() {
                 <SectionPart>
                     <Footer hFull={true} />
                 </SectionPart>
-            </SectionScroller>
+            </SectionScroller> */}
         </div>
     );
 }

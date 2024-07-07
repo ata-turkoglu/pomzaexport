@@ -4,7 +4,7 @@ import { Linkedin, Facebook, Youtube } from "lucide-react";
 function Footer({ hFull = false }) {
     return (
         <div
-            className="bg-[#252525] md:px-10 p-3 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
+            className="w-full bg-[#151a38] md:px-10 p-3 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
             style={{ height: hFull ? "100vh" : "fit-content" }}
         >
             <div className="my-12 flex flex-col md:flex-row gap-10">
@@ -25,6 +25,7 @@ function Footer({ hFull = false }) {
                         {/* Lorem ipsum dolor sit amet consectetur adipisicing
     elit. Maiores, numquam. */}
                     </p>
+                    {/*{" "}
                     <input
                         type="email"
                         name="email"
@@ -36,7 +37,8 @@ function Footer({ hFull = false }) {
                         type="submit"
                         value="Subscribe"
                         className="px-3 py-2 bg-[#252525] rounded-md -ml-2 cursor-pointer hover:bg-[#010851]/10 duration-300 transition-all"
-                    />
+                    />{" "}
+                    */}
                 </div>
                 {/* footer navigations */}
                 <div className="md:w-2/3 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
@@ -69,44 +71,89 @@ function Footer({ hFull = false }) {
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">Ürünlerimiz</h4>
                         <ul className="space-y-3">
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/0"
+                                className="block hover:text-gray-300"
+                            >
                                 Altın
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/1"
+                                className="block hover:text-gray-300"
+                            >
                                 Kuvars
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/2"
+                                className="block hover:text-gray-300"
+                            >
                                 Agrega
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/8"
+                                className="block hover:text-gray-300"
+                            >
                                 Pomza
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/7"
+                                className="block hover:text-gray-300"
+                            >
                                 Perlit
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/2"
+                                className="block hover:text-gray-300"
+                            >
                                 Rutil
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/4"
+                                className="block hover:text-gray-300"
+                            >
                                 Garnet
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/6"
+                                className="block hover:text-gray-300"
+                            >
                                 Hematit
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/5"
+                                className="block hover:text-gray-300"
+                            >
                                 Silis Kumu
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/11"
+                                className="block hover:text-gray-300"
+                            >
                                 Bims Blok
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/10"
+                                className="block hover:text-gray-300"
+                            >
                                 Hazır Beton
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/12"
+                                className="block hover:text-gray-300"
+                            >
                                 Yapı Elemanları
                             </a>
-                            <a href="/" className="block hover:text-gray-300">
+                            <a
+                                href="/product/8"
+                                className="block hover:text-gray-300"
+                            >
                                 Korund
+                            </a>
+                            <a
+                                href="/product/13"
+                                className="block hover:text-gray-300"
+                            >
+                                Kil
                             </a>
                         </ul>
                     </div>

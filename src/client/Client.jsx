@@ -18,7 +18,8 @@ function Client() {
         route.pathname == "/" ? setFooterState(false) : setFooterState(true);
     }, [route]);
     return (
-        <div className="flex flex-col overflow-hidden">
+        <div className="flex flex-col h-max overflow-hidden">
+            {/* <div className="flex flex-col overflow-hidden">
             <div className="flex flex-col h-max overflow-hidden">
                 <Header toBottom={toBottom} bgTransparent={footerState} />
                 <Outlet className="h-max" />
@@ -28,6 +29,10 @@ function Client() {
                     <Footer />
                 </div>
             )}
+        </div> */}
+            <Header toBottom={toBottom} bgTransparent={footerState} />
+            <Outlet className="h-max" />
+            <Footer />
         </div>
     );
 }

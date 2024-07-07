@@ -1,6 +1,6 @@
 .nav-item{
     transition: all ease .25s;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .nav-item:hover{

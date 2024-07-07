@@ -4,7 +4,7 @@
         "facilityId": 1,
         "name": { "tr": "Altın", "en": "Gold" },
         "image": "/assets/products/gold.jpg",
-        "images": ["/assets/products/gold.jpg"],
+        "images": ["/assets/products/gold.jpg", "/assets/products/gold1.jpg"],
         "description": {
             "tr": "Özgül  ağırlığı 19.3 , ergime noktası 1064 °C, kaynama noktası 2660 °C  ve Kimyasal sembolü Au; olan Altın, 35 km kalınlıktaki yer kabuğunda on milyonda 2 den az bir oranda bulunması sebebi ile en az bulunan elementlerden biridir. Altının az olmasının yanında, doğadaki en iyi iletken olması, aynı zamanda su ve oksijen ile reaksiyona girmemesi sebebi(ki bu özelliği sayesinde binlerce sene bozulmadan özelliğini koruyabilmektedir) ile değerli olmasının haklı sebepleri vardır. Altın iletkenlik özelliği ile elektronik, sağlık ve uzay sanayinde geniş kullanım alanına sahiptir. Ayrıca kolay işlenebilme özelliği şekil vermede tartışılmaz üstünlük kazandırmaktadır, bu sebeple de kuyumculuk ve mücevherat sanayinin vazgeçilmezidir. Altın tarih boyunca güç ve güzellik simgesi, en güvenilir yatırım aracı olagelmiştir. Zenginleştirmede nadir kullanılan (yani dünya toplam altın üretiminin %3 lük kısmının üretiminde kullanılan) bir yöntem olan Gravimetrik yöntem ile Salihli Sart'daki ruhsatlı maden sahalarımızda nabit altın elde etmekteyiz. Yoğunluk Farkından Faydalanarak Zenginleştirme olarak tanımlanabilen Gravimetrik Zenginleştirme Yöntemi doğaya ve çevreye dost bir yöntemdir. Ülke ekonomisine katma değer sağalarken doğaya zarar vermeden çalışmalarımızı yapmaktayız.",
             "en": ""
@@ -109,7 +109,11 @@
         "facilityId": 1,
         "name": { "tr": "Garnet", "en": "Garnet" },
         "image": "/assets/products/garnet.jpg",
-        "images": ["/assets/products/garnet.jpg"],
+        "images": [
+            "/assets/products/garnet.jpg",
+            "/assets/products/garnet1.jpg",
+            "/assets/products/garnet3.jpg"
+        ],
         "description": {
             "tr": [
                 "Sadece ürüne özel, dış etkenlerden koruyucu üretim (çift elemeli proses)",
@@ -155,7 +159,11 @@
         "facilityId": 1,
         "name": { "tr": "Hematit", "en": "Hematite" },
         "image": "/assets/products/hematite.jpg",
-        "images": ["/assets/products/hematite.jpg"],
+        "images": [
+            "/assets/products/hematite.jpg",
+            "/assets/products/hematite1.jpg",
+            "/assets/products/hematite2.jpg"
+        ],
         "description": { "tr": "", "en": "" },
         "usageAreas": { "tr": "", "en": "" },
         "productVariety": { "tr": "", "en": "" },
@@ -221,7 +229,7 @@
         "facilityId": 3,
         "name": { "tr": "Pomza", "en": "Pumice" },
         "image": "/assets/products/pumice.jpg",
-        "images": [],
+        "images": ["/assets/products/pumice.jpg"],
         "description": {
             "tr": "İzmir ili Menderes ilçesi Pirintepe mevkiindeki ruhsatlı maden sahamızda pomza ürünlerinin çıkarılması işlenmesi faaliyetleri yapılmaktadır. Standart ürünlerimizin yanında müşteri taleplerine uygun gradasyonda ürün tedariği sağlamaktayız. Pomza, volkanik kökenli slikat esaslı camsı ve gözenekli bir yapıya sahip yüksek puzzolanik aktiviteli hafif yapı elemanıdır. Gözenekli olan bu doğal malzeme bünyesindeki bağlantısız boşluklar sayesinde yüksek ısı ve ses izolasyonu özelliklerine sahiptir. Çok eski çağlardan beri çok yönlü faydaları sebebi ile inşaat sektöründe kullanılan pomza günümüzde yapılarda aranan uzun ömürlülük, hafiflik ve depreme, yangına dayanıklılık, şok emilmesi, elastikiyet, donma olaylarından etkilenmeme gibi niteliklerin öne çıkması sebebi ile her geçen gün pomzanın kullanımı artmaktadır. Doğal olması çevre ve insan sağlığına dost olması tercih sebepleri arasındadır aynı zamanda kimyasal tepkimesiz, yanmaz, inorganik,non-toksik, mikro-organizmalardan etkilenmemesi sağladığı faydalara karşın ekonomiktir. inşaat sektörünün yanında en çok kullanım alanı olan tarımda daha az sulama, su tasarrufu, toprağın havalanmasını sağlama, drenaj düzenleme, toprağa yabancı ot ve hastalık taşımama, toprağın ph dengesini düzenleme, uzun süre kullanılabilmesi gibi faydaları özellikle sulama ve çöl ikliminin hakim olduğu bölgelerde yaygın pomza kullanımı sağlar. Ülkemizde yeni yeni tanınan Pomza çoğu zaman perlit, obsidyen, peks-tayn gibi volkanik kayaçlar ile karıştırılmaktadır. Pomzanın rengi, gözenekliliği ve kristal suyunun olmaması ile pratik olarak ayrılmaktadır ayrıca pomzada gözenekler birbirleri ile bağlantılı olmayan camsı bir zarla ayrılmış yapıdadır.",
             "en": ""
@@ -242,8 +250,8 @@
         "id": 9,
         "facilityId": 3,
         "name": { "tr": "Korund", "en": "Emery" },
-        "image": "/assets/products/rutile2.jpg",
-        "images": [],
+        "image": "/assets/products/korund.jpg",
+        "images": ["/assets/products/korund.jpg"],
         "description": {
             "tr": "Sertliği yaklaşık 8 mohs olan ve bu özelliği ile tercih edilen Korund (doğal alüminyum oksit (Al2O3) ) sertliğinin yanında yoğunluk ve kristal özelliği sebebi ile de aranan bir cevherdir. Çok sert aşındırıcı mekanik özelliğe sahiptir. Halihazırda müşterilerimizin taleplerine uygun olarak üretilen korund PP torba ve Bigbag ambalajlar ile sevk edilmektedir.",
             "en": ""

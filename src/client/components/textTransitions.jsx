@@ -68,5 +68,5 @@ export default function TextTransitions({ children }) {
         };
     }, []);
 
-    return <div className="h-100 w-full">{content}</div>;
+    return <div className="h-100 w-full flex justify-center">{content}</div>;
 }

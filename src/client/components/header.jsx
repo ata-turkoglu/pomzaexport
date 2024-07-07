@@ -3,12 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import productsJSON from "../../data/products.json";
 import minesJSON from "../../data/mines.json";
 import "./css/header.css";
-import {
-    Drawer,
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
+import { Drawer } from "@material-tailwind/react";
 
 function Icon({ id, open }) {
     return (
@@ -35,26 +30,9 @@ function Icon({ id, open }) {
 function Header({ toBottom }) {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
-    const [products, setProducts] = useState([]);
-    const [mines, setMines] = useState([]);
-
-    const [openAcc2, setOpenAcc2] = useState(false);
-
-    const handleOpenAcc2 = () => setOpenAcc2((cur) => !cur);
-
-    useEffect(() => {
-        const pData = productsJSON.map((item) => {
-            return { id: item.id, name: item.name };
-        });
-        setProducts(pData);
-        const mData = minesJSON.map((item) => {
-            return { id: item.id, name: item.name };
-        });
-        setMines(mData);
-    }, []);
 
     return (
-        <nav className="bg-transparent flex items-center fixed z-40 w-full h-20 px-4">
+        <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-20 px-4">
             <div className="w-full h-full flex justify-between items-center">
                 <a
                     href="/"
@@ -92,7 +70,8 @@ function Header({ toBottom }) {
                         </svg>
                     </button>
                 </div>
-                <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white font-extrabold">
+                {/* Navigation */}
+                <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white">
                     <Link
                         to="/about"
                         className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item"
@@ -102,7 +81,7 @@ function Header({ toBottom }) {
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item">
                         İşletmelerimiz
                         <ul className="nav-list pb-3">
-                            {mines.map((item, key) => {
+                            {minesJSON.map((item, key) => {
                                 return (
                                     <li
                                         key={key}
@@ -120,13 +99,20 @@ function Header({ toBottom }) {
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item">
                         Ürünlerimiz
                         <ul className="nav-list pb-3">
-                            {products.map((item, key) => {
+                            {productsJSON.map((item, key) => {
                                 return (
                                     <li
                                         key={key}
                                         className="text-md text-white w-full px-6 pb-2 duration-200 z-40"
                                         onClick={() =>
-                                            navigate("/product/" + item.id)
+                                            item.externalLink
+                                                ? window.open(
+                                                      item.link,
+                                                      "_blank"
+                                                  )
+                                                : navigate(
+                                                      "/product/" + item.id
+                                                  )
                                         }
                                     >
                                         {item.name.tr}

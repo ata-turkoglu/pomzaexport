@@ -12,6 +12,7 @@ export default function Mine() {
     const [header, setHeader] = useState("");
     const [description, setDescription] = useState("");
     const [mineImages, setMineImages] = useState([]);
+    const [mapSrc, setMapSrc] = useState(null);
     const [mineProducts, setMineProducts] = useState([]);
     const [productName, setProductName] = useState(null);
     const [imgUrl, setImgUrl] = useState(null);
@@ -45,8 +46,9 @@ export default function Mine() {
     useEffect(() => {
         const data = minesJSON.find((itm) => itm.id == mineId);
         setHeader(data.name.tr);
-        setDescription(data.description.tr);
+        setDescription(data.info.tr);
         setMineImages([...data.images]);
+        setMapSrc(data.mapSrc);
 
         const products = productsJSON.filter(
             (item) => item.facilityId == mineId
@@ -166,8 +168,22 @@ export default function Mine() {
                 })}
             </div>
 
-            <div className="md:w-1/2 w-full p-3 text-justify">
+            <div className="md:w-1/2 w-full p-3 mb-10 text-justify">
                 {description}
+            </div>
+
+            <div className="md:w-1/2 w-full flex items-center justify-center mb-10">
+                <div className="w-full flex items-center justify-center">
+                    {mapSrc && (
+                        <iframe
+                            src={mapSrc}
+                            width={mobileView ? "380" : "500"}
+                            height={mobileView ? "380" : "500"}
+                            allowFullScreen
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    )}
+                </div>
             </div>
 
             {/* <div className="grid grid-cols-2 gap-2">

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: 'Glober';
+  src: url('./fonts/Fontfabric\ -\ GloberRegular.otf') format('opentype')
+}
+
 *{
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -17,9 +22,9 @@
 }
 #root {
     user-select: none;
-    font-family: 'Play', sans-serif;
+    font-family: 'Glober', sans-serif;
   }
 
-  .d-shadow{
-    filter: drop-shadow(0 0 10 black);
+  .t-shadow{
+    text-shadow:0 0 10px black
   }
