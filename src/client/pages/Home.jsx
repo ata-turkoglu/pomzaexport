@@ -17,7 +17,7 @@ function Home() {
         <div className="flex flex-col h-fit md:min-w-full md:min-h-max">
             <IntroVideo />
             <Facilities />
-            <Sustainability />
+            {/* <Sustainability /> */}
             <Brands />
             {/* <SectionScroller>
                 <SectionPart>

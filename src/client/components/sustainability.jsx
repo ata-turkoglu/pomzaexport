@@ -14,7 +14,7 @@ export default function Sustainability() {
                         src="/assets/common/sustainability.jpg"
                     />
                 </div>
-                <div className="md:absolute left-2 bottom-2 h-40 flex flex-1 mb-3 md:mb-0 ml-3 md:ml-0 mr-3 md:mr-5">
+                <div className="md:absolute left-2 bottom-2 md:h-40 flex flex-1 mb-3 md:mb-0 ml-3 md:ml-0 mr-3 md:mr-5">
                     <img
                         className="w-full h-full object-cover"
                         src="/assets/common/sustainability1.jpg"
