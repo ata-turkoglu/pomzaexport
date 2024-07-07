@@ -142,7 +142,7 @@
         "facilityId": 1,
         "name": { "tr": "Hematit", "en": "Hematite" },
         "image": "/assets/products/hematite.jpg",
-        "images": [],
+        "images": ["/assets/products/hematite.jpg"],
         "description": { "tr": "", "en": "" },
         "usageAreas": { "tr": "", "en": "" },
         "productVariety": { "tr": "", "en": "" },
