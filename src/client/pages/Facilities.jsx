@@ -30,6 +30,7 @@ function Facilities() {
                                 justifySelf: "center",
                             }}
                         >
+                            {item.location} <br></br>
                             {item.name.tr}
                         </span>
                     </div>

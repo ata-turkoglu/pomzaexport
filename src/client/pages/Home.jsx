@@ -7,6 +7,7 @@ import ProductSlider from "../components/productSlider/productSlider";
 import SectionScroller, { SectionPart } from "../components/sectionScroller";
 import FacilityBanner from "../components/facilityBanner";
 import Footer from "../components/footer";
+import Sustainability from "../components/sustainability";
 
 function Home() {
     useLayoutEffect(() => {
@@ -16,6 +17,7 @@ function Home() {
         <div className="flex flex-col h-fit md:min-w-full md:min-h-max">
             <IntroVideo />
             <Facilities />
+            <Sustainability />
             <Brands />
             {/* <SectionScroller>
                 <SectionPart>
