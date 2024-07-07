@@ -9,7 +9,7 @@ function About() {
             className="flex flex-col justify-center items-center h-fit relative overflow-hidden"
             style={{
                 background:
-                    "url(/assets/common/pattern.jpg), rgba(25,25,25,.5)",
+                    "url(/assets/common/pattern.jpg), rgba(21,26,56,.95)",
                 backgroundBlendMode: "multiply",
             }}
         >
