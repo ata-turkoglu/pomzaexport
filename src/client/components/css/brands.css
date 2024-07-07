@@ -9,7 +9,7 @@
     background-position-y: 70%;
     /* filter: brightness(45%); */
     z-index: 0;
-    margin-bottom: 7rem;
+    margin-block: 5rem;
 }
 
 .brands .content {
@@ -86,7 +86,7 @@
 
     .brands {
         flex-direction: column;
-        margin-bottom: 3rem;
+        margin-block: 3rem;
     }
 
     .brands .content{
