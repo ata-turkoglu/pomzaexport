@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import swal from "sweetalert";
 
-const ContactSection = () => {
+export default function Contact() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -263,6 +263,4 @@ const ContactSection = () => {
             </div>
         </section>
     );
-};
-
-export default ContactSection;
+}

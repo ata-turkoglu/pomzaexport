@@ -100,7 +100,7 @@ function Header({ toBottom }) {
                         </ul>
                     </span>
                     <Link
-                        onClick={toBottom}
+                        to="/contact"
                         className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
                         İletişim
@@ -157,10 +157,8 @@ function Header({ toBottom }) {
                         Ürünlerimiz
                     </Link>
                     <Link
-                        onClick={() => {
-                            toBottom();
-                            setIsOpen(false);
-                        }}
+                        onClick={() => setIsOpen(false)}
+                        to="/contact"
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
                         İletişim
