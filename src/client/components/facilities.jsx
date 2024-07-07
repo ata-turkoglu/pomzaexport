@@ -22,7 +22,7 @@ export default function Facilities() {
                             className="w-full h-full object-cover"
                             src={item.mineBgImage}
                         />
-                        <h3 className="absolute left-5 bottom-3 text-white text-2xl t-shadow">
+                        <h3 className="absolute left-5 bottom-3 text-white text-2xl t-shadow font-extrabold">
                             {item.name.tr}
                         </h3>
                     </div>

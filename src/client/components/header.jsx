@@ -71,7 +71,7 @@ function Header({ toBottom }) {
                     </button>
                 </div>
                 {/* Navigation */}
-                <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white">
+                <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white font-extrabold">
                     <Link
                         to="/about"
                         className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item"
