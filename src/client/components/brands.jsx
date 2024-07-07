@@ -9,7 +9,7 @@ function Brands() {
         window.innerWidth < 768 ? setMobile(true) : setMobile(false);
     }, []);
     return (
-        <div className="brands mx-10 overflow-hidden">
+        <div className="brands mx-3 md:mx-10 overflow-hidden">
             <div className="content">
                 <div className="headerContainer">
                     <h1 color="white">Şirketlerimiz</h1>

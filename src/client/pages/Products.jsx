@@ -11,7 +11,7 @@ function Products() {
 
     return (
         <div className="h-full w-full flex flex-col">
-            <div className="h-16 w-100 bg-[#252525]"></div>
+            <div className="h-16 w-100 bg-[#151a38]"></div>
             <div className="grid grid-cols-2 gap-2 p-2">
                 {productsJSON.map((item, index) => (
                     <div

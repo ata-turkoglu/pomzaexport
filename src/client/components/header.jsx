@@ -32,7 +32,7 @@ function Header({ toBottom }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-20 px-4">
+        <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-16 px-4">
             <div className="w-full h-full flex justify-between items-center">
                 <a
                     href="/"
@@ -137,7 +137,7 @@ function Header({ toBottom }) {
                 className="h-full w-screen"
                 overlay={true}
             >
-                <div className="p-4 h-full w-full bg-[#252525] z-50 flex flex-col items-center md:hidden duration-200">
+                <div className="p-4 h-full w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
                     <button
                         onClick={() => setIsOpen(false)}
                         type="button"
