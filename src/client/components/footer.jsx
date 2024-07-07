@@ -4,7 +4,7 @@ import { Linkedin, Facebook, Youtube } from "lucide-react";
 function Footer({ hFull = false }) {
     return (
         <div
-            className="w-full bg-[#151a38] md:px-10 p-3 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
+            className="w-full bg-[#151a38] md:px-10 p-4 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
             style={{ height: hFull ? "100vh" : "fit-content" }}
         >
             <div className="my-12 flex flex-col md:flex-row gap-10">

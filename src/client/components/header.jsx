@@ -5,28 +5,6 @@ import minesJSON from "../../data/mines.json";
 import "./css/header.css";
 import { Drawer } from "@material-tailwind/react";
 
-function Icon({ id, open }) {
-    return (
-        <svg
-            id={"icon-header" + id}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className={`${
-                open ? "rotate-180" : ""
-            } h-5 w-5 transition-transform`}
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-        </svg>
-    );
-}
-
 function Header({ toBottom }) {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +19,7 @@ function Header({ toBottom }) {
                     <img
                         src="/assets/logo/pomzaexport-logo-white.png"
                         alt="Pomzaexport Logo"
-                        className="w-60"
+                        className="w-60 d-shadow"
                     />
                 </a>
                 {/* Mobile Menu Icon */}
@@ -74,11 +52,11 @@ function Header({ toBottom }) {
                 <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white font-extrabold">
                     <Link
                         to="/about"
-                        className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item"
+                        className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
                         Hakkımızda
                     </Link>
-                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item">
+                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
                         İşletmelerimiz
                         <ul className="nav-list pb-3">
                             {minesJSON.map((item, key) => {
@@ -96,7 +74,7 @@ function Header({ toBottom }) {
                             })}
                         </ul>
                     </span>
-                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item">
+                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
                         Ürünlerimiz
                         <ul className="nav-list pb-3">
                             {productsJSON.map((item, key) => {
@@ -123,7 +101,7 @@ function Header({ toBottom }) {
                     </span>
                     <Link
                         onClick={toBottom}
-                        className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item"
+                        className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
                         İletişim
                     </Link>

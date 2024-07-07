@@ -81,7 +81,7 @@ export default function Mine() {
             >
                 <ImgCarousel images={mineImages} />
                 <h1
-                    className="absolute text-white text-3xl md:text-6xl w-fit flex justify-center"
+                    className="absolute text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
                     style={{
                         top: mobileView ? "85%" : "80%",
                         left: "5%",
@@ -98,7 +98,7 @@ export default function Mine() {
                         src={imgUrl}
                     ></img>
                     {!mobileView && (
-                        <span className="text-white z-10 absolute left-10 bottom-10 text-6xl">
+                        <span className="text-white z-10 absolute left-10 bottom-10 text-6xl t-shadow">
                             {productName}
                         </span>
                     )}
@@ -154,7 +154,7 @@ export default function Mine() {
                             ></img>
                             {mobileView && (
                                 <span
-                                    className="text-white z-10 text-center"
+                                    className="text-white z-10 text-center t-shadow"
                                     style={{
                                         display: mobileView ? "block" : "",
                                         fontSize: mobileView ? "1.5rem" : "",

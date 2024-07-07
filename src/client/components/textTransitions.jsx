@@ -31,7 +31,9 @@ export default function TextTransitions({ children }) {
                 <h1
                     id={"text" + index}
                     key={index}
-                    className={index != 0 ? "tth1 hidden" : "tth1"}
+                    className={
+                        index != 0 ? "tth1 hidden t-shadow" : "tth1 t-shadow"
+                    }
                 >
                     {setWords(item)}
                 </h1>
