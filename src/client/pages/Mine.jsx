@@ -133,6 +133,12 @@ export default function Mine() {
                                     (item.externalLink
                                         ? window.open(item.link, "_blank")
                                         : navigate("/product/" + item.id));
+                                mobileView &&
+                                    window.scrollTo({
+                                        top: 0,
+                                        left: 0,
+                                        behavior: "smooth",
+                                    });
                             }}
                             onMouseOver={(e) => {
                                 mouseOver(e, item.name.tr);

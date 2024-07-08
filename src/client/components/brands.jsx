@@ -39,10 +39,10 @@ function Brands() {
                     </div>
                 </div>
             </div>
-            {!mobile ? (
-                <div className="content-border"></div>
-            ) : (
+            {mobile ? (
                 <div className="content-border-h"></div>
+            ) : (
+                <div className="content-border"></div>
             )}
             <div className="content">
                 <div className="headerContainer">
