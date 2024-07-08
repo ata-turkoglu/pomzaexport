@@ -6,7 +6,7 @@ export default function Facilities() {
     const navigate = useNavigate();
     return (
         <div className="bg-[#151a381a] w-full flex justify-center">
-            <div className="max-w-[1300px] w-full h-fit flex flex-col items-center py-12 md:py-20 md:pl-10 md:pr-5">
+            <div className="max-w-[1300px] w-full h-fit flex flex-col items-center pt-12 pb-4 md:py-20 md:pl-10 md:pr-5">
                 <div className="w-full h-fit flex">
                     <h2 className="text-2xl md:text-4xl mb-2 md:mb-7 w-full flex justify-center md:mr-3 pt-3 md:pt-0">
                         Hammadde Üretim Tesislerimiz
@@ -31,14 +31,14 @@ export default function Facilities() {
                     ))}
                 </div>
                 <div className="w-full flex flex-col items-center">
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-xl text-center md:mr-3">
+                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-center md:mr-3">
                         Ürettiğimiz cevherlerden farklı sektörlerin
                         ihtiyaçlarını karşılayan yüksek kaliteli uç ürünler
                         üretme konusunda durmadan çalışmaktayız. Amacımız, kendi
                         ürettiğimiz minerallerin değerlerini arttırarak ülkemize
                         daha fazla katma değer oluşturmaktadır.
                     </span>
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-xl text-center md:mr-3">
+                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-center md:mr-3">
                         Türkiyenin ilk 100% yerli sermaye ile altın üreten
                         firması olmanın gururunu yaşamaktayız. Her zaman "Önce
                         insan, sonra çevre, sonra maden" ilkesi ile hareket

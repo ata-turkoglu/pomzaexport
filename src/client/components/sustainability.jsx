@@ -18,18 +18,18 @@ export default function Sustainability() {
                     </h2>
                     <ul className="p-3 md:p-0">
                         <li className="text-lg md:text-xl">
-                            Solar panel sayımızı her geçen gün artıyor
+                            Solar panel sayımızı her geçen gün artıyor,
                         </li>
                         <li className="text-lg md:text-xl">
-                            Kamyonlarda elektrikli araç dönüşümünü başladı
+                            Kamyonlarda elektrikli araç dönüşümünü başladı,
                         </li>
                         <li className="text-lg md:text-xl">
                             Çevre danışmanlarımız ile toz ve emisyonlarımızı
-                            kontrol altında
+                            kontrol altında,
                         </li>
                         <li className="text-lg md:text-xl">
                             Su tüketimimizi yağmur sularını yönlendirip
-                            depolayarak minimuma indirdik
+                            depolayarak minimuma indirdik.
                         </li>
                     </ul>
                 </div>
