@@ -1,10 +1,12 @@
 import React from "react";
 import "./css/brands.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 /* import { translateText as t } from "../../store/reducers/language"; */
 
 function Brands() {
     const [mobile, setMobile] = useState(null);
+    const navigate = useNavigate();
     useEffect(() => {
         window.innerWidth < 768 ? setMobile(true) : setMobile(false);
     }, []);
@@ -50,32 +52,49 @@ function Brands() {
                 </div>
                 <div className="images">
                     <div className="imgContainer">
-                        <a href="/product/7" target="_blank">
-                            <img src="/assets/logo/etiper-logo-white.png" />
-                        </a>
+                        <img
+                            className="cursor-pointer"
+                            onClick={() => navigate("/product/7")}
+                            src="/assets/logo/etiper-logo-white.png"
+                        />
                     </div>
                     <div className="imgContainer">
-                        <a href="/product/1" target="_blank">
-                            <img src="/assets/logo/sardesquartz-logo-white.png" />
-                        </a>
+                        <img
+                            className="cursor-pointer"
+                            onClick={() => navigate("/product/1")}
+                            src="/assets/logo/sardesquartz-logo-white.png"
+                        />
                     </div>
                     <div className="imgContainer">
-                        <img src="/assets/logo/emerex-logo-white.png" />
+                        <img
+                            className="cursor-pointer"
+                            onClick={() => navigate("/product/9")}
+                            src="/assets/logo/emerex-logo-white.png"
+                        />
                     </div>
                 </div>
                 <div className="images">
                     <div className="imgContainer">
-                        <img src="/assets/logo/pomexblok-logo-white.png" />
-                    </div>
-                    <div className="imgContainer">
-                        <a href="/product/4" target="_blank">
-                            <img src="/assets/logo/pomexgarnet-logo-white.png" />
+                        <a
+                            href="https://www.eilepomex.com/pomexblok"
+                            target="_blank"
+                        >
+                            <img src="/assets/logo/pomexblok-logo-white.png" />
                         </a>
                     </div>
                     <div className="imgContainer">
-                        <a href="/product/10" target="_blank">
-                            <img src="/assets/logo/pomexbeton-logo-white.png" />
-                        </a>
+                        <img
+                            className="cursor-pointer"
+                            onClick={() => navigate("/product/4")}
+                            src="/assets/logo/pomexgarnet-logo-white.png"
+                        />
+                    </div>
+                    <div className="imgContainer">
+                        <img
+                            className="cursor-pointer"
+                            onClick={() => navigate("/product/10")}
+                            src="/assets/logo/pomexbeton-logo-white.png"
+                        />
                     </div>
                 </div>
             </div>
