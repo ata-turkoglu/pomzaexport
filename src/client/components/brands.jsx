@@ -50,18 +50,12 @@ function Brands() {
                 </div>
                 <div className="images">
                     <div className="imgContainer">
-                        <a
-                            href="https://www.pomzaexport.com/product/7"
-                            target="_blank"
-                        >
+                        <a href="/product/7" target="_blank">
                             <img src="/assets/logo/etiper-logo-white.png" />
                         </a>
                     </div>
                     <div className="imgContainer">
-                        <a
-                            href="https://www.pomzaexport.com/product/1"
-                            target="_blank"
-                        >
+                        <a href="/product/1" target="_blank">
                             <img src="/assets/logo/sardesquartz-logo-white.png" />
                         </a>
                     </div>
@@ -74,18 +68,12 @@ function Brands() {
                         <img src="/assets/logo/pomexblok-logo-white.png" />
                     </div>
                     <div className="imgContainer">
-                        <a
-                            href="https://www.pomzaexport.com/product/4"
-                            target="_blank"
-                        >
+                        <a href="/product/4" target="_blank">
                             <img src="/assets/logo/pomexgarnet-logo-white.png" />
                         </a>
                     </div>
                     <div className="imgContainer">
-                        <a
-                            href="https://www.pomzaexport.com/product/10"
-                            target="_blank"
-                        >
+                        <a href="/product/10" target="_blank">
                             <img src="/assets/logo/pomexbeton-logo-white.png" />
                         </a>
                     </div>

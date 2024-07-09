@@ -31,14 +31,14 @@ export default function Facilities() {
                     ))}
                 </div>
                 <div className="w-full flex flex-col items-center">
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-center md:mr-3">
+                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         Ürettiğimiz cevherlerden farklı sektörlerin
                         ihtiyaçlarını karşılayan yüksek kaliteli uç ürünler
                         üretme konusunda durmadan çalışmaktayız. Amacımız, kendi
                         ürettiğimiz minerallerin değerlerini arttırarak ülkemize
                         daha fazla katma değer oluşturmaktadır.
                     </span>
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-center md:mr-3">
+                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         Türkiyenin ilk 100% yerli sermaye ile altın üreten
                         firması olmanın gururunu yaşamaktayız. Her zaman "Önce
                         insan, sonra çevre, sonra maden" ilkesi ile hareket

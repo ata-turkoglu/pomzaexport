@@ -33,7 +33,7 @@ export default function Sustainability() {
                             depolayarak minimuma indirdik.
                         </li>
                     </ul> */}
-                    <span className="p-3 md:p-0 text-center text-lg md:text-xl">
+                    <span className="p-3 md:p-0 text-justify md:text-center text-lg md:text-xl">
                         Güneş paneli sayımız her geçen gün artıyor. Kamyonlarda
                         elektrikli araç dönüşümünü başlattık. Çevre
                         danışmanlarımız ile toz ve emisyonlarımızı kontrol
