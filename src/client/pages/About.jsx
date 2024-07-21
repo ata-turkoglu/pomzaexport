@@ -91,12 +91,42 @@ function About() {
                     üretilen ağır mineral, mikronize kuvars ve öğütülmüş pomza
                     kullanılmaktadır.
                 </p>
-                <p>
+                <p className="mb-4">
                     Sart tesisinde plaser yatak içindeki kuvars mineralleri
                     öğütülerek mikronize kuvars üretilmektedir. Plaser yatak
                     içindeki küçük boyutlu kuvars parçalarının da ayrılarak
                     mikronize kuvars üretimi için tesiste optik ayırıca
                     kurulmuştur.
+                </p>
+
+                <p className="text-xl mb-4">
+                    Sağlık ve güvenliğe öncelik vererek toplumu ve
+                    çalışanlarımızı koruyor, sürdürülebilirlik ilkeleriyle
+                    çevreyi savunuyor ve kaliteli ürünlerle sektöre katkı
+                    sağlıyoruz.
+                </p>
+
+                <h2 className="text-2xl underline mb-4">Önce İnsan</h2>
+
+                <p className="mb-4">
+                    Sağlık ve güvenliğe öncelik vererek, çalışanlarımızın ve
+                    toplumun refahını sağlamak için çalışıyoruz.
+                </p>
+
+                <h2 className="text-2xl underline mb-4">Sonra Çevre</h2>
+
+                <p className="mb-4">
+                    Sürdürülebilirlik ilkeleri doğrultusunda, doğal kaynakları
+                    koruyarak ve çevresel etkileri en aza indirerek
+                    faaliyetlerimizi yürütüyoruz.
+                </p>
+
+                <h2 className="text-2xl underline mb-4">Sonra Maden</h2>
+
+                <p className="mb-4">
+                    Kaliteli ve güvenilir ürünler sunarak, sektörde lider
+                    konumumuzu sürdürüyoruz ve ekonomik büyümeye katkıda
+                    bulunuyoruz.
                 </p>
             </div>
         </div>
