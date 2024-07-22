@@ -13,9 +13,9 @@ function Client() {
             behavior: "smooth",
         });
     };
-
     useEffect(() => {
         route.pathname == "/" ? setFooterState(false) : setFooterState(true);
+        window.scrollTo(0, 0);
     }, [route]);
     return (
         <div className="flex flex-col h-max overflow-hidden">

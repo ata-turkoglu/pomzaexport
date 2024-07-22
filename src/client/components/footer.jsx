@@ -1,5 +1,6 @@
 import React from "react";
 import { Linkedin, Facebook, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Footer({ hFull = false }) {
     return (
@@ -46,24 +47,24 @@ function Footer({ hFull = false }) {
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">İşletmelerimiz</h4>
                         <ul className="space-y-3">
-                            <a
-                                href="/mine/1"
+                            <Link
+                                to="/mine/1"
                                 className="block hover:text-gray-300"
                             >
                                 Sart Maden İşletmesi
-                            </a>
-                            <a
-                                href="/mine/2"
+                            </Link>
+                            <Link
+                                to="/mine/2"
                                 className="block hover:text-gray-300"
                             >
                                 Yeniköy Maden İşletmesi
-                            </a>
-                            <a
-                                href="/mine/3"
+                            </Link>
+                            <Link
+                                to="/mine/3"
                                 className="block hover:text-gray-300"
                             >
                                 Küner Maden İşletmesi
-                            </a>
+                            </Link>
                         </ul>
                     </div>
 
