@@ -11,8 +11,8 @@ function Footer({ hFull = false }) {
             <div className="my-12 flex flex-col md:flex-row gap-10">
                 <div className="md:w-1/3 space-y-8">
                     {!hFull && (
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
                             className="text-2x1 font-semibold flex items-center space-x-3 text-primary"
                         >
                             <img
@@ -20,7 +20,7 @@ function Footer({ hFull = false }) {
                                 alt=""
                                 className="w-60 inline-block items-center"
                             />
-                        </a>
+                        </Link>
                     )}
                     <p className="md:w-1/2">
                         {/* Lorem ipsum dolor sit amet consectetur adipisicing
@@ -72,90 +72,90 @@ function Footer({ hFull = false }) {
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">Ürünlerimiz</h4>
                         <ul className="space-y-3">
-                            <a
-                                href="/product/0"
+                            <Link
+                                to="/product/0"
                                 className="block hover:text-gray-300"
                             >
                                 Altın
-                            </a>
-                            <a
-                                href="/product/1"
+                            </Link>
+                            <Link
+                                to="/product/1"
                                 className="block hover:text-gray-300"
                             >
                                 Kuvars
-                            </a>
-                            <a
-                                href="/product/2"
+                            </Link>
+                            <Link
+                                to="/product/2"
                                 className="block hover:text-gray-300"
                             >
                                 Agrega
-                            </a>
-                            <a
-                                href="/product/8"
+                            </Link>
+                            <Link
+                                to="/product/8"
                                 className="block hover:text-gray-300"
                             >
                                 Pomza
-                            </a>
-                            <a
-                                href="/product/7"
+                            </Link>
+                            <Link
+                                to="/product/7"
                                 className="block hover:text-gray-300"
                             >
                                 Perlit
-                            </a>
-                            <a
-                                href="/product/2"
+                            </Link>
+                            <Link
+                                to="/product/2"
                                 className="block hover:text-gray-300"
                             >
                                 Rutil
-                            </a>
-                            <a
-                                href="/product/4"
+                            </Link>
+                            <Link
+                                to="/product/4"
                                 className="block hover:text-gray-300"
                             >
                                 Garnet
-                            </a>
-                            <a
-                                href="/product/6"
+                            </Link>
+                            <Link
+                                to="/product/6"
                                 className="block hover:text-gray-300"
                             >
                                 Hematit
-                            </a>
-                            <a
-                                href="/product/5"
+                            </Link>
+                            <Link
+                                to="/product/5"
                                 className="block hover:text-gray-300"
                             >
                                 Silis Kumu
-                            </a>
-                            <a
-                                href="/product/11"
+                            </Link>
+                            <Link
+                                to="/product/11"
                                 className="block hover:text-gray-300"
                             >
                                 Bims Blok
-                            </a>
-                            <a
-                                href="/product/10"
+                            </Link>
+                            <Link
+                                to="/product/10"
                                 className="block hover:text-gray-300"
                             >
                                 Hazır Beton
-                            </a>
-                            <a
-                                href="/product/12"
+                            </Link>
+                            <Link
+                                to="/product/12"
                                 className="block hover:text-gray-300"
                             >
                                 Yapı Elemanları
-                            </a>
-                            <a
-                                href="/product/8"
+                            </Link>
+                            <Link
+                                to="/product/8"
                                 className="block hover:text-gray-300"
                             >
                                 Korund
-                            </a>
-                            <a
-                                href="/product/13"
+                            </Link>
+                            <Link
+                                to="/product/13"
                                 className="block hover:text-gray-300"
                             >
                                 Kil
-                            </a>
+                            </Link>
                         </ul>
                     </div>
 
@@ -224,30 +224,30 @@ function Footer({ hFull = false }) {
             <div className="flex flex-col sm:flex-row gap-8 sm:items-center justify-between my-8">
                 <p>@2024 POMZA EXPORT. Tüm Hakları Saklıdır.</p>
                 <div className="flex items-center space-x-5">
-                    <a
-                        href="https://www.linkedin.com/company/pomzaexport/"
+                    <Link
+                        to="https://www.linkedin.com/company/pomzaexport/"
                         target="_blank"
                         aria-label="LinkedIn"
-                        className="w-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+                        className="w-8 cursor-pointer hover:-translate-y-1 transition-all duration-300"
                     >
                         <Linkedin />
-                    </a>
-                    <a
-                        href="https://facebook.com"
+                    </Link>
+                    <Link
+                        to="https://facebook.com"
                         target="_blank"
                         aria-label="Facebook"
-                        className="w-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+                        className="w-8 cursor-pointer hover:-translate-y-1 transition-all duration-300"
                     >
                         <Facebook />
-                    </a>
-                    <a
-                        href="https://youtube.com"
+                    </Link>
+                    <Link
+                        to="https://youtube.com"
                         target="_blank"
                         aria-label="Youtube"
-                        className="w-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+                        className="w-8 cursor-pointer hover:-translate-y-1 transition-all duration-300"
                     >
                         <Youtube />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
