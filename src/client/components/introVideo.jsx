@@ -30,11 +30,13 @@ export default function IntroVideo() {
             </div>
             <div className="absolute z-10 bottom-1/4 inset-x-0 h-fit w-full px-4">
                 <TextTransitions>
-                    <TextContainer>Sıfır atık ile çalışıyoruz...</TextContainer>
+                    <TextContainer>Sıfır atık ile çalışıyoruz.</TextContainer>
                     <TextContainer>
                         Türkiyenin ilk ve tek Rutil üreticisiyiz.
                     </TextContainer>
-                    <TextContainer>Doğaya saygıyla...</TextContainer>
+                    <TextContainer>
+                        Türk maden sektöründe çevreci çalışmalarda bir lideriz.
+                    </TextContainer>
                     <TextContainer>
                         Ülkenin ilk ve tek Garnet üreticisiyiz.
                     </TextContainer>

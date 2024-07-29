@@ -14,6 +14,9 @@ function About() {
             }}
         >
             <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
+                <h2 className="mb-3 text-3xl text-center font-bold">
+                    Biz Kimiz?
+                </h2>
                 <p className="mb-2">
                     Şirketimiz, Erzincan da 1969 yılında perlit madeni
                     işletmesiyle başladığı endüstriyel hammadde üretimini bugün;
@@ -99,21 +102,25 @@ function About() {
                     kurulmuştur.
                 </p>
 
-                <p className="text-xl mb-4">
+                <h2 className="mb-3 mt-5 text-3xl text-center">
+                    Vizyon - Misyon
+                </h2>
+
+                <p className="mb-4">
                     Sağlık ve güvenliğe öncelik vererek toplumu ve
                     çalışanlarımızı koruyor, sürdürülebilirlik ilkeleriyle
                     çevreyi savunuyor ve kaliteli ürünlerle sektöre katkı
                     sağlıyoruz.
                 </p>
 
-                <h2 className="text-2xl underline mb-4">Önce İnsan</h2>
+                <h2 className="text-xl mb-4">Önce İnsan;</h2>
 
                 <p className="mb-4">
                     Sağlık ve güvenliğe öncelik vererek, çalışanlarımızın ve
                     toplumun refahını sağlamak için çalışıyoruz.
                 </p>
 
-                <h2 className="text-2xl underline mb-4">Sonra Çevre</h2>
+                <h2 className="text-xl mb-4">Sonra Çevre;</h2>
 
                 <p className="mb-4">
                     Sürdürülebilirlik ilkeleri doğrultusunda, doğal kaynakları
@@ -121,7 +128,7 @@ function About() {
                     faaliyetlerimizi yürütüyoruz.
                 </p>
 
-                <h2 className="text-2xl underline mb-4">Sonra Maden</h2>
+                <h2 className="text-xl mb-4">Sonra Maden;</h2>
 
                 <p className="mb-4">
                     Kaliteli ve güvenilir ürünler sunarak, sektörde lider

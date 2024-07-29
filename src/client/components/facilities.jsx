@@ -34,9 +34,9 @@ export default function Facilities() {
                     <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         Ürettiğimiz cevherlerden farklı sektörlerin
                         ihtiyaçlarını karşılayan yüksek kaliteli uç ürünler
-                        üretme konusunda durmadan çalışmaktayız. Amacımız, kendi
-                        ürettiğimiz minerallerin değerlerini arttırarak ülkemize
-                        daha fazla katma değer oluşturmaktadır.
+                        üretiyoruz. Amacımız, kendi ürettiğimiz minerallerin
+                        değerlerini arttırarak ülkemize daha fazla katma değer
+                        oluşturmaktadır.
                     </span>
                     <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         Türkiyenin ilk 100% yerli sermaye ile altın üreten
