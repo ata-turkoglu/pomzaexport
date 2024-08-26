@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import swal from "sweetalert";
+import { Mail } from "lucide-react";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -38,12 +39,11 @@ export default function Contact() {
             formData.message;
 
         window.Email.send({
-            Host: "mail.kurumsaleposta.com",
-            SecureToken: "b8c77eaf-d45f-4f9e-a163-1e39d4910939",
-            Username: "test@pomzaexport.com",
-            Password: "Ataturkoglu87A",
-            To: "test@pomzaexport.com",
-            From: "test@pomzaexport.com",
+            Host: "smtp.elasticemail.com",
+            Username: "info@pomzaexport.com",
+            Password: import.meta.env.VITE_STMP_PASS,
+            To: "info@pomzaexport.com",
+            From: "info@pomzaexport.com",
             Subject: "Email from website",
             Body: body,
         }).then((message) => {
@@ -120,7 +120,7 @@ export default function Contact() {
                                             Sart Mah. Pomza Sk. No: 40,
                                             Salihli/MANİSA
                                             <br />
-                                            Telefon : +90 236 774 20 21
+                                            Telefon : +90 236 724 20 21
                                             <br />
                                             Fax : +90 236 774 30 51 <br />
                                             <br />
@@ -128,12 +128,12 @@ export default function Contact() {
                                                 EİLE POMEX YAPI KİMYASALLARI
                                             </strong>
                                             <br />
-                                            Kavaklıdere Cad. No: 277
-                                            Kavaklıdere/Bornova/İZMİR
+                                            Yeniköy Mah. Menderes - Orhanlı Yolu
+                                            Sk. No : 179/22 Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 360 16 16
+                                            Telefon : +90 232 360 17 77
                                             <br />
-                                            Fax : +90 232 360 17 77 <br />
+                                            Fax : +90 232 360 16 16 <br />
                                             <br />
                                             <strong>
                                                 MENDERES MADEN İŞLETMESİ
@@ -162,7 +162,7 @@ export default function Contact() {
                                             Çukurca Birlik Mah. 447 Sk. No: 3/5
                                             Çankaya/ANKARA
                                             <br />
-                                            Telefon : +90 312 495 64 50
+                                            Telefon : +90 312 495 64 90
                                             <br />
                                             Fax : +90 312 495 64 93
                                         </p>
@@ -171,10 +171,16 @@ export default function Contact() {
                             </ul>
                         </div>
                         <div
-                            className="card h-fit max-w-6xl p-5 md:p-12"
+                            className="card h-fit max-w-6xl p-5 md:p-12 md:pt-1"
                             id="form"
                         >
-                            <h2 className="mb-4 text-2xl font-bold text-white">
+                            <div className="flex">
+                                <Mail color="white" />
+                                <span className="ml-3 text-white text-bold text-lg">
+                                    info@pomzaexport.com
+                                </span>
+                            </div>
+                            <h2 className="my-4 text-2xl font-bold text-white">
                                 Bize Ulaşın
                             </h2>
                             <form id="contactForm" onSubmit={handleSubmit}>
