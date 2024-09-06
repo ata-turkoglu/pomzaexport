@@ -1,19 +1,25 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
+import { AppContext } from "../context/AppContext";
 
 function About() {
+    const { websiteData, lang } = React.useContext(AppContext);
+    const { text_tr, text_en } = websiteData.about;
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <div
+            id="about"
             className="flex flex-col justify-center items-center h-fit relative overflow-hidden"
-            style={{
-                background:
-                    "url(/assets/common/pattern.jpg), rgba(21,26,56,.95)",
-                backgroundBlendMode: "multiply",
-            }}
         >
-            <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
+            <div
+                className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full"
+                dangerouslySetInnerHTML={{
+                    __html: lang == "TR" ? text_tr : text_en,
+                }}
+            ></div>
+            {/* <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
                 <h2 className="mb-3 text-3xl text-center font-bold">
                     Biz Kimiz?
                 </h2>
@@ -135,7 +141,7 @@ function About() {
                     konumumuzu sürdürüyoruz ve ekonomik büyümeye katkıda
                     bulunuyoruz.
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 }

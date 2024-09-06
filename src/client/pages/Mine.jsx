@@ -1,11 +1,13 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState, useContext } from "react";
 import ImgCarousel from "../components/imgCarousel";
 import { useNavigate, useParams } from "react-router-dom";
 import minesJSON from "../../data/mines.json";
 import productsJSON from "../../data/products.json";
 import "./css/mine.css";
+import { AppContext } from "../context/AppContext";
 
 export default function Mine() {
+    const { mines, products, lang } = useContext(AppContext);
     const { mineId } = useParams();
     const navigate = useNavigate();
     const [mobileView, setMobileView] = useState(false);
@@ -20,7 +22,8 @@ export default function Mine() {
     const [linkId, setLinkId] = useState(null);
     const [external, setExternal] = useState(false);
 
-    const mouseOver = (e, name) => {
+    const mouseOver = (e, item) => {
+        const name = lang == "TR" ? item.productName_tr : item.productName_en;
         setProductName(name);
         if (e.target.src) {
             setImgUrl(e.target.src);
@@ -44,16 +47,28 @@ export default function Mine() {
     }, []);
 
     useEffect(() => {
+        const db = mines.find((itm) => itm.mineId == mineId);
+        const name = lang == "TR" ? db.mineName_tr : db.mineName_en;
+        const info = lang == "TR" ? db.description_tr : db.description_en;
+
+        //json
         const data = minesJSON.find((itm) => itm.id == mineId);
-        setHeader(data.name.tr);
-        setDescription(data.info.tr);
+        setHeader(name);
+        setDescription(info);
         setMineImages([...data.images]);
         setMapSrc(data.mapSrc);
 
-        const products = productsJSON.filter(
+        const dbproducts = products.filter((item) => item.mineId == mineId);
+        const productsJ = productsJSON.filter(
             (item) => item.facilityId == mineId
         );
-        setMineProducts([...products]);
+
+        dbproducts.forEach((item) => {
+            const found = productsJ.find((itm) => itm.id == item.productId);
+            item.bgImage = found.image;
+            item.images = [...found.images];
+        });
+        setMineProducts([...dbproducts]);
     }, [mineId]);
 
     useEffect(() => {
@@ -132,7 +147,9 @@ export default function Mine() {
                                 !mobileView &&
                                     (item.externalLink
                                         ? window.open(item.link, "_blank")
-                                        : navigate("/product/" + item.id));
+                                        : navigate(
+                                              "/product/" + item.productId
+                                          ));
                                 mobileView &&
                                     window.scrollTo({
                                         top: 0,
@@ -141,13 +158,13 @@ export default function Mine() {
                                     });
                             }}
                             onMouseOver={(e) => {
-                                mouseOver(e, item.name.tr);
+                                mouseOver(e, item);
                                 item.externalLink
                                     ? setExternal(true)
                                     : setExternal(false);
                                 item.externalLink
                                     ? setLinkId(item.link)
-                                    : setLinkId(item.id);
+                                    : setLinkId(item.productId);
                             }}
                             onMouseLeave={(e) => {
                                 mouseLeave(e);
@@ -156,7 +173,7 @@ export default function Mine() {
                         >
                             <img
                                 className="w-full h-full object-cover"
-                                src={item.image}
+                                src={item.bgImage}
                             ></img>
                             {mobileView && (
                                 <span
@@ -166,7 +183,13 @@ export default function Mine() {
                                         fontSize: mobileView ? "1.5rem" : "",
                                     }}
                                 >
-                                    {item.name.tr}
+                                    {
+                                        item[
+                                            productName +
+                                                "_" +
+                                                lang.toLowerCase()
+                                        ]
+                                    }
                                 </span>
                             )}
                         </div>

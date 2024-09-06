@@ -1,9 +1,17 @@
-import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
+import React, {
+    useState,
+    useLayoutEffect,
+    useRef,
+    useCallback,
+    useContext,
+} from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import swal from "sweetalert";
 import { Mail } from "lucide-react";
+import { AppContext } from "../context/AppContext";
 
 export default function Contact() {
+    const { lang } = useContext(AppContext);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -82,7 +90,9 @@ export default function Contact() {
                     <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                         <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200"></p>
                         <h2 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-3xl sm:text-5xl">
-                            Bizimle İletişime Geçin
+                            {lang == "TR"
+                                ? "Bizimle İletişime Geçin"
+                                : "Contact Us"}
                         </h2>
                     </div>
                 </div>
@@ -110,59 +120,88 @@ export default function Contact() {
                                     </div>
                                     <div className="ml-4 mb-4">
                                         <h3 className="mb-2 text-lg font-medium leading-6 text-white dark:text-white">
-                                            İletişim Adreslerimiz
+                                            {lang == "TR"
+                                                ? "İletişim Adreslerimiz"
+                                                : "Contact Addresses"}
                                         </h3>
                                         <p className="text-white dark:text-slate-400">
                                             <strong>
-                                                SART MADEN İŞLETMESİ
+                                                {lang == "TR"
+                                                    ? "SART MADEN İŞLETMESİ"
+                                                    : "SART MINING OPERATIONS"}
                                             </strong>
                                             <br />
                                             Sart Mah. Pomza Sk. No: 40,
                                             Salihli/MANİSA
                                             <br />
-                                            Telefon : +90 236 724 20 21
+                                            {lang == "TR"
+                                                ? "Telefon"
+                                                : "Phone"}{" "}
+                                            : +90 236 724 20 21
                                             <br />
                                             Fax : +90 236 774 30 51 <br />
                                             <br />
                                             <strong>
-                                                EİLE POMEX YAPI KİMYASALLARI
+                                                {lang == "TR"
+                                                    ? "EİLE POMEX YAPI KİMYASALLARI"
+                                                    : "EİLE POMEX CONSTRUCTION CHEMICALS"}
                                             </strong>
                                             <br />
                                             Yeniköy Mah. Menderes - Orhanlı Yolu
                                             Sk. No : 179/22 Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 360 17 77
+                                            {lang == "TR"
+                                                ? "Telefon"
+                                                : "Phone"}{" "}
+                                            : +90 232 360 17 77
                                             <br />
                                             Fax : +90 232 360 16 16 <br />
                                             <br />
                                             <strong>
-                                                MENDERES MADEN İŞLETMESİ
+                                                {lang == "TR"
+                                                    ? "MENDERES MADEN İŞLETMESİ"
+                                                    : "MENDERES MINING OPERATIONS"}
                                             </strong>
                                             <br />
                                             Küner Mah. 7801 Sk. No:94
                                             Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 782 14 46
+                                            {lang == "TR"
+                                                ? "Telefon"
+                                                : "Phone"}{" "}
+                                            : +90 232 782 14 46
                                             <br />
                                             Fax : +90 232 782 15 98 <br />
                                             <br />
                                             <strong>
-                                                ETİPER PERLİT İŞLETMESİ
+                                                {lang == "TR"
+                                                    ? "ETİPER PERLİT İŞLETMESİ"
+                                                    : "ETİPER PERLITE OPERATIONS"}
                                             </strong>
                                             <br />
                                             Yeniköy Mah. Menderes - Orhanlı Yolu
                                             Sk. No : 179/22 Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 787 67 24
+                                            {lang == "TR"
+                                                ? "Telefon"
+                                                : "Phone"}{" "}
+                                            : +90 232 787 67 24
                                             <br />
                                             Fax : +90 232 782 67 25 <br />
                                             <br />
-                                            <strong>ANKARA OFİS</strong>
+                                            <strong>
+                                                {lang == "TR"
+                                                    ? "ANKARA OFİS"
+                                                    : "ANKARA OFFICE"}
+                                            </strong>
                                             <br />
                                             Çukurca Birlik Mah. 447 Sk. No: 3/5
                                             Çankaya/ANKARA
                                             <br />
-                                            Telefon : +90 312 495 64 90
+                                            {lang == "TR"
+                                                ? "Telefon"
+                                                : "Phone"}{" "}
+                                            : +90 312 495 64 90
                                             <br />
                                             Fax : +90 312 495 64 93
                                         </p>
@@ -181,7 +220,7 @@ export default function Contact() {
                                 </span>
                             </div>
                             <h2 className="my-4 text-2xl font-bold text-white">
-                                Bize Ulaşın
+                                {lang == "TR" ? "Bize Ulaşın" : "Contact Us"}
                             </h2>
                             <form id="contactForm" onSubmit={handleSubmit}>
                                 <div className="mb-6">
@@ -196,7 +235,11 @@ export default function Contact() {
                                                 id="name"
                                                 name="name"
                                                 autoComplete="given-name"
-                                                placeholder="Ad Soyad"
+                                                placeholder={
+                                                    lang == "TR"
+                                                        ? "Ad Soyad"
+                                                        : "Name"
+                                                }
                                                 className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                                 value={formData.name}
                                                 onChange={handleChange}
@@ -212,7 +255,11 @@ export default function Contact() {
                                                 id="email"
                                                 name="email"
                                                 autoComplete="email"
-                                                placeholder="Mail Adresiniz"
+                                                placeholder={
+                                                    lang == "TR"
+                                                        ? "Mail Adresiniz"
+                                                        : "Email"
+                                                }
                                                 className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                                 value={formData.email}
                                                 onChange={handleChange}
@@ -229,7 +276,11 @@ export default function Contact() {
                                             name="message"
                                             cols="30"
                                             rows="5"
-                                            placeholder="Lütfen Mesajınızı Yazınız"
+                                            placeholder={
+                                                lang == "TR"
+                                                    ? "Lütfen Mesajınızı Yazınız"
+                                                    : "Type your message"
+                                            }
                                             className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                             value={formData.message}
                                             onChange={handleChange}
@@ -247,7 +298,7 @@ export default function Contact() {
                                         className="w-full bg-white text-[#151a38] px-6 py-3 font-xl rounded-md sm:mb-0 flex items-center justify-center"
                                     >
                                         <span className="p-0 m-0 flex items-center">
-                                            Gönder
+                                            {lang == "TR" ? "Gönder" : "Send"}
                                         </span>
                                     </button>
                                 </div>

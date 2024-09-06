@@ -1,13 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import productsJSON from "../../data/products.json";
 import minesJSON from "../../data/mines.json";
 import "./css/header.css";
 import { Drawer } from "@material-tailwind/react";
+import { AppContext } from "../context/AppContext";
 
 function Header({ toBottom }) {
     const navigate = useNavigate();
+    const { mines, products, lang, setLang } = useContext(AppContext);
     const [isOpen, setIsOpen] = useState(false);
+
+    const compareName = (lang, a, b, name) => {
+        if (lang == "TR") {
+            return a[name + "_tr"].localeCompare(b[name + "_tr"]);
+        } else {
+            return a[name + "_en"].localeCompare(b[name + "_en"]);
+        }
+    };
 
     return (
         <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-16 px-4">
@@ -52,59 +62,89 @@ function Header({ toBottom }) {
                 <div className="hidden md:flex md:items-center space-x-4 h-full text-lg text-white font-extrabold">
                     <Link
                         to="/about"
-                        className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item t-shadow"
+                        className="px-7 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
-                        Hakkımızda
+                        {lang == "TR" ? "Hakkımızda" : "About"}
                     </Link>
-                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        İşletmelerimiz
+                    <span className="px-7 py-2 h-full text-lg flex items-center cursor-default relative nav-link nav-item t-shadow">
+                        {lang == "TR" ? "İşletmelerimiz" : "Operations"}
                         <ul className="nav-list pb-3">
-                            {minesJSON.map((item, key) => {
-                                return (
-                                    <li
-                                        key={key}
-                                        className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
-                                        onClick={() =>
-                                            navigate("/mine/" + item.id)
-                                        }
-                                    >
-                                        {item.name.tr}
-                                    </li>
-                                );
-                            })}
+                            {mines
+                                .sort((a, b) =>
+                                    compareName(lang, a, b, "mineName")
+                                )
+                                .map((item, key) => {
+                                    return (
+                                        <li
+                                            key={key}
+                                            className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
+                                            onClick={() =>
+                                                navigate("/mine/" + item.mineId)
+                                            }
+                                        >
+                                            {lang == "TR"
+                                                ? item.mineName_tr
+                                                : item.mineName_en}
+                                        </li>
+                                    );
+                                })}
                         </ul>
                     </span>
-                    <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        Ürünlerimiz
+                    <span className="px-7 py-2 h-full text-lg cursor-default flex items-center relative nav-link nav-item t-shadow">
+                        {lang == "TR" ? "Ürünlerimiz" : "Products"}
                         <ul className="nav-list pb-3">
-                            {productsJSON.map((item, key) => {
-                                return (
-                                    <li
-                                        key={key}
-                                        className="text-md text-white w-full px-6 pb-2 duration-200 z-40"
-                                        onClick={() =>
-                                            item.externalLink
-                                                ? window.open(
-                                                      item.link,
-                                                      "_blank"
-                                                  )
-                                                : navigate(
-                                                      "/product/" + item.id
-                                                  )
-                                        }
-                                    >
-                                        {item.name.tr}
-                                    </li>
-                                );
-                            })}
+                            {products
+                                .sort((a, b) =>
+                                    compareName(lang, a, b, "productName")
+                                )
+                                .map((item, key) => {
+                                    return (
+                                        <li
+                                            key={key}
+                                            className="text-md text-white w-full px-5 pb-2 duration-200 z-40 cursor-pointer"
+                                            onClick={() =>
+                                                item.link
+                                                    ? window.open(
+                                                          item.link,
+                                                          "_blank"
+                                                      )
+                                                    : navigate(
+                                                          "/product/" +
+                                                              item.productId
+                                                      )
+                                            }
+                                        >
+                                            {lang == "TR"
+                                                ? item.productName_tr
+                                                : item.productName_en}
+                                        </li>
+                                    );
+                                })}
                         </ul>
                     </span>
                     <Link
                         to="/contact"
                         className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
-                        İletişim
+                        {lang == "TR" ? "İletişim" : "Contact"}
                     </Link>
+                    <span className="px-7 py-2 h-full text-lg flex items-center cursor-default relative nav-link nav-item t-shadow">
+                        {lang}
+                        <ul className="nav-list pb-3">
+                            <li
+                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
+                                onClick={() => setLang("TR")}
+                            >
+                                TR
+                            </li>
+                            <li
+                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
+                                onClick={() => setLang("EN")}
+                            >
+                                EN
+                            </li>
+                        </ul>
+                    </span>
                 </div>
             </div>
             {/* Mobile Menu */}
@@ -140,29 +180,46 @@ function Header({ toBottom }) {
                         onClick={() => setIsOpen(false)}
                         className="text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        Hakkımızda
+                        {lang == "TR" ? "Hakkımızda" : "About"}
                     </Link>
                     <Link
                         to="/facilities"
                         onClick={() => setIsOpen(false)}
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        İşletmelerimiz
+                        {lang == "TR" ? "İşletmelerimiz" : "Operations"}
                     </Link>
                     <Link
                         to="/products"
                         onClick={() => setIsOpen(false)}
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        Ürünlerimiz
+                        {lang == "TR" ? "Ürünlerimiz" : "Products"}
                     </Link>
                     <Link
                         onClick={() => setIsOpen(false)}
                         to="/contact"
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        İletişim
+                        {lang == "TR" ? "İletişim" : "Contact"}
                     </Link>
+                    <span className="px-6 py-2 h-full text-lg text-white flex items-center cursor-default relative nav-link nav-item t-shadow">
+                        {lang}
+                        <ul className="nav-list pb-3">
+                            <li
+                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
+                                onClick={() => setLang("TR")}
+                            >
+                                TR
+                            </li>
+                            <li
+                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
+                                onClick={() => setLang("EN")}
+                            >
+                                EN
+                            </li>
+                        </ul>
+                    </span>
                 </div>
             </Drawer>
             {/*isOpen && (

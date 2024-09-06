@@ -1,8 +1,32 @@
 import React from "react";
 import TextTransitions, { TextContainer } from "./textTransitions";
 import "./css/introVideo.css";
+import { AppContext } from "../context/AppContext";
 
 export default function IntroVideo() {
+    const { websiteData, lang } = React.useContext(AppContext);
+    const { videoTexts_tr, videoTexts_en } = websiteData.mainPage;
+
+    const TextList = () => {
+        if (lang == "TR") {
+            return (
+                <TextTransitions>
+                    {videoTexts_tr.map((item, key) => {
+                        return <TextContainer key={key}>{item}</TextContainer>;
+                    })}
+                </TextTransitions>
+            );
+        } else {
+            return (
+                <TextTransitions>
+                    {videoTexts_en.map((item, key) => {
+                        return <TextContainer key={key}>{item}</TextContainer>;
+                    })}
+                </TextTransitions>
+            );
+        }
+    };
+
     return (
         <div className="relative">
             <div className="h-full w-full overflow-hidden hidden md:block">
@@ -29,7 +53,8 @@ export default function IntroVideo() {
                 />
             </div>
             <div className="absolute z-10 bottom-1/4 inset-x-0 h-fit w-full px-4">
-                <TextTransitions>
+                <TextList />
+                {/* <TextTransitions>
                     <TextContainer>
                         Lidyalıların bıraktığı yerden devam ediyoruz.
                     </TextContainer>
@@ -46,7 +71,7 @@ export default function IntroVideo() {
                     <TextContainer>
                         Ülkenin ilk ve tek Garnet üreticisiyiz.
                     </TextContainer>
-                </TextTransitions>
+                </TextTransitions> */}
             </div>
         </div>
     );

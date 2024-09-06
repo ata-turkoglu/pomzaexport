@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState, useLayoutEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import productsJSON from "../../data/products.json";
 import {
@@ -6,6 +6,7 @@ import {
     AccordionHeader,
     AccordionBody,
 } from "@material-tailwind/react";
+import { AppContext } from "../context/AppContext";
 
 const CUSTOM_ANIMATION = {
     mount: { scale: 1 },
@@ -35,6 +36,7 @@ function Icon({ id, open }) {
 }
 
 export default function Product() {
+    const { products, lang } = useContext(AppContext);
     const { productId } = useParams();
     const [productData, setProductData] = useState(null);
     const [selectedImg, setSelectedImg] = useState(null);
@@ -59,10 +61,65 @@ export default function Product() {
     }, []);
 
     useEffect(() => {
+        const dbProduct = products.find((itm) => itm.productId == productId);
         const data = productsJSON.find((itm) => itm.id == productId);
-        setSelectedImg(data.image);
-        setProductData(data);
+        dbProduct.bgImage = data.image;
+        dbProduct.images = data.images;
+        setSelectedImg(dbProduct.bgImage);
+        setProductData(dbProduct);
     }, [productId]);
+
+    const setTechnicalInfo = (data, lang) => {
+        const pData =
+            lang == "TR" ? data.technicalInfo_tr : data.technicalInfo_en;
+        if (!pData) return null;
+        let keys = [];
+        let vals = [];
+        pData.forEach((item) => {
+            keys.push(Object.keys(item)[0]);
+            vals.push(Object.values(item)[0]);
+        });
+        return (
+            <Accordion
+                open={openAcc4}
+                animate={CUSTOM_ANIMATION}
+                className="pt-5"
+                icon={<Icon id={4} open={openAcc4} />}
+            >
+                <AccordionHeader onClick={handleOpenAcc4}>
+                    {lang == "TR" ? "Teknik Bilgiler" : "Technical Info"}
+                </AccordionHeader>
+                <AccordionBody className="flex flex-col text-md">
+                    {keys.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                <span className="mr-2">{item}:</span>
+                                <span>{vals[index]}</span>
+                            </div>
+                        );
+                    })}
+                    {/* {productData.technicalInfo.chemicalFormula && (
+                        <span>
+                            Kimyasal Formül:
+                            {" " + productData.technicalInfo.chemicalFormula}
+                        </span>
+                    )}
+                    {productData.technicalInfo.gravity && (
+                        <span>
+                            Yoğunluk:
+                            {" " + productData.technicalInfo.gravity}
+                        </span>
+                    )}
+                    {productData.technicalInfo.hardness && (
+                        <span>
+                            Sertlik:
+                            {" " + productData.technicalInfo.hardness}
+                        </span>
+                    )} */}
+                </AccordionBody>
+            </Accordion>
+        );
+    };
 
     return (
         <div className="h-fit">
@@ -80,7 +137,9 @@ export default function Product() {
                             loading="lazy"
                         ></img>
                         <h1 className="w-full text-4xl font-bold text-white absolute left-0 flex justify-center bottom-0 pb-5">
-                            {productData.name.tr}
+                            {lang == "TR"
+                                ? productData.productName_tr
+                                : productData.productName_en}
                         </h1>
                     </div>
                     <div className="p-3 w-full md:w-2/3 h-fit">
@@ -91,12 +150,17 @@ export default function Product() {
                             icon={<Icon id={1} open={openAcc1} />}
                         >
                             <AccordionHeader onClick={handleOpenAcc1}>
-                                Ürün Bilgileri
+                                {lang == "TR"
+                                    ? "Ürün Bilgileri"
+                                    : "Product Information"}
                             </AccordionHeader>
                             <AccordionBody className="text-md">
-                                {typeof productData.description.tr ==
+                                {lang == "TR"
+                                    ? productData.description_tr
+                                    : productData.description_en}
+                                {/* {typeof productData.description_tr ==
                                 "string" ? (
-                                    productData.description.tr
+                                    {lang=='TR'?productData.description_tr:productData.description_en}
                                 ) : (
                                     <ul>
                                         {productData.description.tr.map(
@@ -105,7 +169,7 @@ export default function Product() {
                                             )
                                         )}
                                     </ul>
-                                )}
+                                )} */}
                             </AccordionBody>
                         </Accordion>
                         {productData.images.length > 0 && (
@@ -116,7 +180,9 @@ export default function Product() {
                                 icon={<Icon id={2} open={openAcc2} />}
                             >
                                 <AccordionHeader onClick={handleOpenAcc2}>
-                                    Ürün Resimleri
+                                    {lang == "TR"
+                                        ? "Ürün Resimleri"
+                                        : "Product Images"}
                                 </AccordionHeader>
                                 <AccordionBody className="h-full w-full grid grid-cols-3 gap-1 md:gap-0 md:flex md:items-center md:justify-center ">
                                     {productData.images.map((item, indx) => (
@@ -138,7 +204,7 @@ export default function Product() {
                                 </AccordionBody>
                             </Accordion>
                         )}
-                        {productData.usageAreas.tr && (
+                        {productData.areasOfUsage_tr && (
                             <Accordion
                                 open={openAcc3}
                                 animate={CUSTOM_ANIMATION}
@@ -146,14 +212,23 @@ export default function Product() {
                                 icon={<Icon id={3} open={openAcc3} />}
                             >
                                 <AccordionHeader onClick={handleOpenAcc3}>
-                                    Kullanım Alanları
+                                    {lang == "TR"
+                                        ? "Kullanım Alanları"
+                                        : "Areas Of Usage"}
                                 </AccordionHeader>
                                 <AccordionBody className="text-md">
-                                    {productData.usageAreas.tr}
+                                    {/* productData.areasOfUsage_tr */}
+                                    <ul>
+                                        {productData[
+                                            "areasOfUsage_" + lang.toLowerCase()
+                                        ].map((itm, indx) => (
+                                            <li key={indx}>{itm}</li>
+                                        ))}
+                                    </ul>
                                 </AccordionBody>
                             </Accordion>
                         )}
-                        {productData.productVariety.tr && (
+                        {productData.productVariety && (
                             <Accordion
                                 open={openAcc3}
                                 animate={CUSTOM_ANIMATION}
@@ -161,52 +236,16 @@ export default function Product() {
                                 icon={<Icon id={3} open={openAcc3} />}
                             >
                                 <AccordionHeader onClick={handleOpenAcc3}>
-                                    Ürün Çeşitleri
+                                    {lang == "TR"
+                                        ? "Ürün Çeşitleri"
+                                        : "Product Variety"}
                                 </AccordionHeader>
                                 <AccordionBody className="text-md">
-                                    {productData.productVariety.tr}
+                                    {productData.productVariety}
                                 </AccordionBody>
                             </Accordion>
                         )}
-                        {productData.technicalInfo && (
-                            <Accordion
-                                open={openAcc4}
-                                animate={CUSTOM_ANIMATION}
-                                className="pt-5"
-                                icon={<Icon id={4} open={openAcc4} />}
-                            >
-                                <AccordionHeader onClick={handleOpenAcc4}>
-                                    Teknik Bilgiler
-                                </AccordionHeader>
-                                <AccordionBody className="flex flex-col text-md">
-                                    {productData.technicalInfo
-                                        .chemicalFormula && (
-                                        <span>
-                                            Kimyasal Formül:
-                                            {" " +
-                                                productData.technicalInfo
-                                                    .chemicalFormula}
-                                        </span>
-                                    )}
-                                    {productData.technicalInfo.gravity && (
-                                        <span>
-                                            Yoğunluk:
-                                            {" " +
-                                                productData.technicalInfo
-                                                    .gravity}
-                                        </span>
-                                    )}
-                                    {productData.technicalInfo.hardness && (
-                                        <span>
-                                            Sertlik:
-                                            {" " +
-                                                productData.technicalInfo
-                                                    .hardness}
-                                        </span>
-                                    )}
-                                </AccordionBody>
-                            </Accordion>
-                        )}
+                        {setTechnicalInfo(productData, lang)}
                     </div>
                 </div>
             )}

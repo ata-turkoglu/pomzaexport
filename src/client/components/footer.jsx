@@ -1,8 +1,19 @@
 import React from "react";
 import { Linkedin, Facebook, Youtube } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 function Footer({ hFull = false }) {
+    const navigate = useNavigate();
+    const { mines, products, lang } = React.useContext(AppContext);
+    const compareName = (lang, a, b, name) => {
+        if (lang == "TR") {
+            return a[name + "_tr"].localeCompare(b[name + "_tr"]);
+        } else {
+            return a[name + "_en"].localeCompare(b[name + "_en"]);
+        }
+    };
+
     return (
         <div
             className="w-full bg-[#151a38] md:px-10 p-4 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
@@ -45,9 +56,28 @@ function Footer({ hFull = false }) {
                 <div className="md:w-2/3 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
                     {/* Mines */}
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline">İşletmelerimiz</h4>
+                        <h4 className="text-xl underline">
+                            {lang == "TR" ? "İşletmelerimiz" : "Operations"}
+                        </h4>
                         <ul className="space-y-3">
-                            <Link
+                            {mines
+                                .sort((a, b) =>
+                                    compareName(lang, a, b, "mineName")
+                                )
+                                .map((item, key) => {
+                                    return (
+                                        <Link
+                                            key={key}
+                                            to={"/mine/" + item.mineId}
+                                            className="block hover:text-gray-300"
+                                        >
+                                            {lang == "TR"
+                                                ? item.mineName_tr
+                                                : item.mineName_en}
+                                        </Link>
+                                    );
+                                })}
+                            {/* <Link
                                 to="/mine/1"
                                 className="block hover:text-gray-300"
                             >
@@ -64,15 +94,40 @@ function Footer({ hFull = false }) {
                                 className="block hover:text-gray-300"
                             >
                                 Küner Maden İşletmesi
-                            </Link>
+                            </Link> */}
                         </ul>
                     </div>
 
                     {/* Products */}
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline">Ürünlerimiz</h4>
+                        <h4 className="text-xl underline">
+                            {lang == "TR" ? "Ürünlerimiz" : "Products"}
+                        </h4>
                         <ul className="space-y-3">
-                            <Link
+                            {products.sort().map((item, key) => {
+                                return (
+                                    <li
+                                        key={key}
+                                        className="block hover:text-gray-300 cursor-pointer"
+                                        onClick={() =>
+                                            item.link
+                                                ? window.open(
+                                                      item.link,
+                                                      "_blank"
+                                                  )
+                                                : navigate(
+                                                      "/product/" +
+                                                          item.productId
+                                                  )
+                                        }
+                                    >
+                                        {lang == "TR"
+                                            ? item.productName_tr
+                                            : item.productName_en}
+                                    </li>
+                                );
+                            })}
+                            {/*<Link
                                 to="/product/0"
                                 className="block hover:text-gray-300"
                             >
@@ -155,61 +210,88 @@ function Footer({ hFull = false }) {
                                 className="block hover:text-gray-300"
                             >
                                 Kil
-                            </Link>
+                            </Link>*/}
                         </ul>
                     </div>
 
                     {/* Address */}
                     <div className="space-y-4 mt-4">
                         <h4 className="text-xl underline">
-                            İletişim Adreslerimiz
+                            {lang == "TR"
+                                ? "İletişim Adreslerimiz"
+                                : "Contact Addresses"}
                         </h4>
                         <ul className="space-y-5 text-sm">
-                            <p className="hover:text-gray-300">
-                                <strong>SART MADEN İŞLETMESİ</strong>
+                            <p>
+                                <strong>
+                                    {lang == "TR"
+                                        ? "SART MADEN İŞLETMESİ"
+                                        : "SART MINING OPERATIONS"}
+                                </strong>
                                 <br />
                                 Sart Mah. Pomza Sk. No: 40, Salihli/MANİSA
                                 <br />
-                                Telefon : +90 236 774 20 21
+                                {lang == "TR" ? "Telefon" : "Phone"} : +90 236
+                                724 20 21
                                 <br />
-                                Fax : +90 236 774 30 51
+                                Fax : +90 236 724 30 51
                             </p>
-                            <p className="hover:text-gray-300">
-                                <strong>MENDERES MADEN İŞLETMESİ</strong>
+                            <p>
+                                <strong>
+                                    {lang == "TR"
+                                        ? "MENDERES MADEN İŞLETMESİ"
+                                        : "MENDERES MINING OPERATIONS"}
+                                </strong>
                                 <br />
                                 Küner Mah. 7801 Sk. No:94 Menderes/İZMİR
                                 <br />
-                                Telefon : +90 232 782 14 46
+                                {lang == "TR" ? "Telefon" : "Phone"} : +90 232
+                                782 14 46
                                 <br />
                                 Fax : +90 232 782 15 98
                             </p>
-                            <p className="hover:text-gray-300">
-                                <strong>ETİPER PERLİT İŞLETMESİ</strong>
+                            <p>
+                                <strong>
+                                    {lang == "TR"
+                                        ? "ETİPER PERLİT İŞLETMESİ"
+                                        : "ETİPER PERLITE OPERATIONS"}
+                                </strong>
                                 <br />
                                 Yeniköy Mah. Menderes - Orhanlı Yolu Sk. No :
                                 179/22 Menderes/İZMİR
                                 <br />
-                                Telefon : +90 232 787 67 24
+                                {lang == "TR" ? "Telefon" : "Phone"} : +90 232
+                                787 67 24
                                 <br />
                                 Fax : +90 232 782 67 25
                             </p>
-                            <p className="hover:text-gray-300">
-                                <strong>EİLE POMEX YAPI KİMYASALLARI</strong>
+                            <p>
+                                <strong>
+                                    {lang == "TR"
+                                        ? "EİLE POMEX YAPI KİMYASALLARI"
+                                        : "EİLE POMEX CONSTRUCTION CHEMICALS"}
+                                </strong>
                                 <br />
                                 Kavaklıdere Cad. No: 277
                                 Kavaklıdere/Bornova/İZMİR
                                 <br />
-                                Telefon : +90 232 360 16 16
+                                {lang == "TR" ? "Telefon" : "Phone"} : +90 232
+                                360 17 77
                                 <br />
-                                Fax : +90 232 360 17 77
+                                Fax : +90 232 360 16 16
                             </p>
-                            <p className="hover:text-gray-300">
-                                <strong>ANKARA OFİS</strong>
+                            <p>
+                                <strong>
+                                    {lang == "TR"
+                                        ? "ANKARA OFİS"
+                                        : "ANKARA OFFICE"}
+                                </strong>
                                 <br />
                                 Çukurca Birlik Mah. 447 Sk. No: 3/5
                                 Çankaya/ANKARA
                                 <br />
-                                Telefon : +90 312 495 64 50
+                                {lang == "TR" ? "Telefon" : "Phone"} : +90 312
+                                495 64 90
                                 <br />
                                 Fax : +90 312 495 64 93
                             </p>

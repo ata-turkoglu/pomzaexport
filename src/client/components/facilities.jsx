@@ -1,15 +1,52 @@
 import React from "react";
 import mineJSON from "../../data/mines.json";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 export default function Facilities() {
     const navigate = useNavigate();
+    const { websiteData, lang } = React.useContext(AppContext);
+    const {
+        facilitiesTextHeader_tr,
+        facilitiesTextHeader_en,
+        facilitiesText_tr,
+        facilitiesText_en,
+    } = websiteData.mainPage;
+
+    const FacilitiesText = () => {
+        if (lang == "TR") {
+            return facilitiesText_tr.map((item, index) => {
+                return (
+                    <span
+                        key={index}
+                        className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3"
+                    >
+                        {item}
+                    </span>
+                );
+            });
+        } else {
+            return facilitiesText_en.map((item, index) => {
+                return (
+                    <span
+                        key={index}
+                        className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3"
+                    >
+                        {item}
+                    </span>
+                );
+            });
+        }
+    };
+
     return (
         <div className="bg-[#151a381a] w-full flex justify-center">
             <div className="max-w-[1300px] w-full h-fit flex flex-col items-center pt-12 pb-4 md:py-20 md:pl-10 md:pr-5">
                 <div className="w-full h-fit flex">
                     <h2 className="text-2xl md:text-4xl mb-2 md:mb-7 w-full flex justify-center md:mr-3 pt-3 md:pt-0">
-                        Hammadde Üretim Tesislerimiz
+                        {lang == "TR"
+                            ? facilitiesTextHeader_tr
+                            : facilitiesTextHeader_en}
                     </h2>
                 </div>
                 <div className="w-full h-fit md:h-84 flex flex-col md:flex-row items-center justify-center">
@@ -31,7 +68,8 @@ export default function Facilities() {
                     ))}
                 </div>
                 <div className="w-full flex flex-col items-center">
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
+                    <FacilitiesText />
+                    {/* <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         Ürettiğimiz cevherlerden farklı sektörlerin
                         ihtiyaçlarını karşılayan yüksek kaliteli uç ürünler
                         üretiyoruz. Amacımız, kendi ürettiğimiz minerallerin
@@ -43,7 +81,7 @@ export default function Facilities() {
                         firması olmanın gururunu yaşamaktayız. Her zaman "Önce
                         insan, sonra çevre, sonra maden" ilkesi ile hareket
                         ederiz.
-                    </span>
+                    </span> */}
                 </div>
             </div>
         </div>
