@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "facilityId": 1,
         "name": { "tr": "Altın", "en": "Gold" },
         "image": "/assets/products/gold.jpg",
@@ -23,7 +23,7 @@
         "link": "/product/0"
     },
     {
-        "id": 1,
+        "id": 2,
         "facilityId": 1,
         "name": { "tr": "Kuvars", "en": "Quartz" },
         "image": "/assets/products/quartz.jpg",
@@ -53,7 +53,7 @@
         "link": "/product/1"
     },
     {
-        "id": 2,
+        "id": 3,
         "facilityId": 1,
         "name": { "tr": "Rutil", "en": "Rutile" },
         "image": "/assets/products/rutile.jpg",
@@ -84,7 +84,7 @@
         "link": "/product/2"
     },
     {
-        "id": 3,
+        "id": 4,
         "facilityId": 1,
         "name": { "tr": "Agrega", "en": "Agregates" },
         "image": "/assets/products/agregates.jpg",
@@ -105,7 +105,7 @@
         "link": "/product/3"
     },
     {
-        "id": 4,
+        "id": 5,
         "facilityId": 1,
         "name": { "tr": "Garnet", "en": "Garnet" },
         "image": "/assets/products/garnet.jpg",
@@ -137,7 +137,7 @@
         "link": "/product/4"
     },
     {
-        "id": 5,
+        "id": 6,
         "facilityId": 1,
         "name": { "tr": "Silis Kumu", "en": "Silica Sand" },
         "image": "/assets/products/silis.jpg",
@@ -155,7 +155,7 @@
         "link": "/product/5"
     },
     {
-        "id": 6,
+        "id": 7,
         "facilityId": 1,
         "name": { "tr": "Hematit", "en": "Hematite" },
         "image": "/assets/products/hematite.jpg",
@@ -176,7 +176,7 @@
         "link": "/product/6"
     },
     {
-        "id": 7,
+        "id": 8,
         "facilityId": 2,
         "name": { "tr": "Perlit", "en": "Perlite" },
         "image": "/assets/products/perlite.jpg",
@@ -225,7 +225,7 @@
         "link": "/product/7"
     },
     {
-        "id": 8,
+        "id": 9,
         "facilityId": 3,
         "name": { "tr": "Pomza", "en": "Pumice" },
         "image": "/assets/products/pumice.jpg",
@@ -247,7 +247,7 @@
         "link": "/product/8"
     },
     {
-        "id": 9,
+        "id": 10,
         "facilityId": 3,
         "name": { "tr": "Korund", "en": "Emery" },
         "image": "/assets/products/korund.jpg",
@@ -270,7 +270,7 @@
         "link": "/product/9"
     },
     {
-        "id": 10,
+        "id": 11,
         "facilityId": 1,
         "name": { "tr": "Hazır Beton", "en": "Ready Mixed Concrete" },
         "image": "/assets/mineImages/sart/8.jpg",
@@ -289,7 +289,7 @@
         "link": "/product/10"
     },
     {
-        "id": 11,
+        "id": 12,
         "facilityId": 2,
         "name": { "tr": "Bims Blok", "en": "Bims Block" },
         "image": "/assets/products/bims-blok.jpg",
@@ -302,7 +302,7 @@
         "link": "https://eilepomex.com/pomexblok"
     },
     {
-        "id": 12,
+        "id": 13,
         "facilityId": 2,
         "name": { "tr": "Yapı Elemanları", "en": "Construction Chemicals" },
         "image": "/assets/products/eilepomex.jpg",
@@ -315,7 +315,7 @@
         "link": "https://eilepomex.com"
     },
     {
-        "id": 13,
+        "id": 14,
         "facilityId": 1,
         "name": { "tr": "Kil", "en": "Clay" },
         "image": "/assets/products/clay.jpg",

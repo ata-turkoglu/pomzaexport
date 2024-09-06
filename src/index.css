@@ -21,3 +21,8 @@
     filter: drop-shadow(0 0 10px black);
     -webkit-filter: drop-shadow(0 0 10px rgba(85, 85, 85, 0.5));
   }
+
+  #about{
+    background:url("/assets/common/pattern.jpg") center / cover no-repeat rgba(21,26,56,.95);
+    background-blend-mode: multiply;
+  }
