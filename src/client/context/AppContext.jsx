@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
 
     const fetchData = async () => {
         const res = await fetch(
-            import.meta.VITE_SERVER_URL + "/website/getAllTexts"
+            import.meta.env.VITE_SERVER_URL + "/website/getAllTexts"
         ).then((res) => res.json());
 
         setWebsiteData(res.website);
