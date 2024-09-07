@@ -7,6 +7,7 @@ export default defineConfig({
     base: "./",
     build: { chunkSizeWarningLimit: 1600 },
     define: {
-        __APP_ENV__: process.env.VITE_SERVER_URL,
+        "process.env": process.env,
+        VITE_SERVER_URL: process.env.VITE_SERVER_URL,
     },
 });
