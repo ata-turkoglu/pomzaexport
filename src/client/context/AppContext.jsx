@@ -1,4 +1,5 @@
 import { createContext, useLayoutEffect, useState, useEffect } from "react";
+import axios from "axios";
 
 export const AppContext = createContext();
 
@@ -11,9 +12,7 @@ export const AppProvider = ({ children }) => {
 
     const fetchData = async () => {
         const url = process.env.VITE_SERVER_URL + "/website/getAllTexts";
-        const res = await fetch(url, { method: "GET" }).then((res) =>
-            res.json()
-        );
+        const res = await axios.get(url).then((res) => res.data);
 
         setWebsiteData(res.website);
         setProducts(res.products);
