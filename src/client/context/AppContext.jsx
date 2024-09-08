@@ -10,13 +10,10 @@ export const AppProvider = ({ children }) => {
     const [lang, setLang] = useState("TR");
 
     const fetchData = async () => {
-        console.log(
-            "---",
-            process.env.VITE_SERVER_URL + "/website/getAllTexts"
+        const url = process.env.VITE_SERVER_URL + "/website/getAllTexts";
+        const res = await fetch(url, { method: "GET" }).then((res) =>
+            res.json()
         );
-        const res = await fetch(
-            process.env.VITE_SERVER_URL + "/website/getAllTexts"
-        ).then((res) => res.json());
 
         setWebsiteData(res.website);
         setProducts(res.products);
