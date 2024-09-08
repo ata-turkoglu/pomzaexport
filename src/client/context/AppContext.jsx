@@ -11,7 +11,12 @@ export const AppProvider = ({ children }) => {
     const [lang, setLang] = useState("TR");
 
     const url = process.env.VITE_SERVER_URL;
-    const axConf = axios.create({ baseURL: url });
+    const axConf = axios.create({
+        baseURL: url,
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
 
     const fetchData = async () => {
         const res = await axConf
