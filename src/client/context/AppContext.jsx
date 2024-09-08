@@ -10,9 +10,13 @@ export const AppProvider = ({ children }) => {
     const [siteReady, setSiteReady] = useState(false);
     const [lang, setLang] = useState("TR");
 
+    const url = process.env.VITE_SERVER_URL;
+    const axConf = axios.create({ baseURL: url });
+
     const fetchData = async () => {
-        const url = process.env.VITE_SERVER_URL + "/website/getAllTexts";
-        const res = await axios.get(url).then((res) => res.data);
+        const res = await axConf
+            .get("/website/getAllTexts")
+            .then((res) => res.data);
 
         setWebsiteData(res.website);
         setProducts(res.products);
