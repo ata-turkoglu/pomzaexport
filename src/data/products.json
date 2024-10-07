@@ -4,7 +4,12 @@
         "facilityId": 1,
         "name": { "tr": "Altın", "en": "Gold" },
         "image": "/assets/products/gold.jpg",
-        "images": ["/assets/products/gold.jpg", "/assets/products/gold1.jpg"],
+        "images": [
+            "/assets/products/gold.jpg",
+            "/assets/products/gold1.jpg",
+            "/assets/products/gold2.jpg",
+            "/assets/products/gold3.jpg"
+        ],
         "description": {
             "tr": "Özgül  ağırlığı 19.3 , ergime noktası 1064 °C, kaynama noktası 2660 °C  ve Kimyasal sembolü Au; olan Altın, 35 km kalınlıktaki yer kabuğunda on milyonda 2 den az bir oranda bulunması sebebi ile en az bulunan elementlerden biridir. Altının az olmasının yanında, doğadaki en iyi iletken olması, aynı zamanda su ve oksijen ile reaksiyona girmemesi sebebi(ki bu özelliği sayesinde binlerce sene bozulmadan özelliğini koruyabilmektedir) ile değerli olmasının haklı sebepleri vardır. Altın iletkenlik özelliği ile elektronik, sağlık ve uzay sanayinde geniş kullanım alanına sahiptir. Ayrıca kolay işlenebilme özelliği şekil vermede tartışılmaz üstünlük kazandırmaktadır, bu sebeple de kuyumculuk ve mücevherat sanayinin vazgeçilmezidir. Altın tarih boyunca güç ve güzellik simgesi, en güvenilir yatırım aracı olagelmiştir. Zenginleştirmede nadir kullanılan (yani dünya toplam altın üretiminin %3 lük kısmının üretiminde kullanılan) bir yöntem olan Gravimetrik yöntem ile Salihli Sart'daki ruhsatlı maden sahalarımızda nabit altın elde etmekteyiz. Yoğunluk Farkından Faydalanarak Zenginleştirme olarak tanımlanabilen Gravimetrik Zenginleştirme Yöntemi doğaya ve çevreye dost bir yöntemdir. Ülke ekonomisine katma değer sağalarken doğaya zarar vermeden çalışmalarımızı yapmaktayız.",
             "en": ""
