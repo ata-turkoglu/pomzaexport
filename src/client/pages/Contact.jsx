@@ -122,7 +122,7 @@ export default function Contact() {
                                             <br />
                                             Telefon : +90 236 724 20 21
                                             <br />
-                                            Fax : +90 236 774 30 51 <br />
+                                            Fax : +90 236 724 30 51 <br />
                                             <br />
                                             <strong>
                                                 EİLE POMEX YAPI KİMYASALLARI

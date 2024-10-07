@@ -168,16 +168,20 @@ function Footer({ hFull = false }) {
                             <p className="hover:text-gray-300">
                                 <strong>SART MADEN İŞLETMESİ</strong>
                                 <br />
-                                Sart Mah. Pomza Sk. No: 40, Salihli/MANİSA
+                                Sart Mah. Pomza Sk. No: 40
                                 <br />
-                                Telefon : +90 236 774 20 21
+                                Salihli/MANİSA
                                 <br />
-                                Fax : +90 236 774 30 51
+                                Telefon : +90 236 724 20 21
+                                <br />
+                                Fax : +90 236 724 30 51
                             </p>
                             <p className="hover:text-gray-300">
                                 <strong>MENDERES MADEN İŞLETMESİ</strong>
                                 <br />
-                                Küner Mah. 7801 Sk. No:94 Menderes/İZMİR
+                                Küner Mah. 7801 Sk. No:94
+                                <br />
+                                Menderes/İZMİR
                                 <br />
                                 Telefon : +90 232 782 14 46
                                 <br />
@@ -186,8 +190,8 @@ function Footer({ hFull = false }) {
                             <p className="hover:text-gray-300">
                                 <strong>ETİPER PERLİT İŞLETMESİ</strong>
                                 <br />
-                                Yeniköy Mah. Menderes - Orhanlı Yolu Sk. No :
-                                179/22 Menderes/İZMİR
+                                Yeniköy Mah. Menderes - Orhanlı Yolu Sk. No:
+                                179/22 <br /> Menderes/İZMİR
                                 <br />
                                 Telefon : +90 232 787 67 24
                                 <br />
@@ -196,20 +200,23 @@ function Footer({ hFull = false }) {
                             <p className="hover:text-gray-300">
                                 <strong>EİLE POMEX YAPI KİMYASALLARI</strong>
                                 <br />
-                                Kavaklıdere Cad. No: 277
-                                Kavaklıdere/Bornova/İZMİR
+                                Yeniköy Mah. Menderes - Orhanlı Yolu Sk. No:
+                                179/22
                                 <br />
-                                Telefon : +90 232 360 16 16
+                                Menderes/İZMİR
                                 <br />
-                                Fax : +90 232 360 17 77
+                                Telefon : +90 232 360 17 77
+                                <br />
+                                Fax : +90 232 360 16 16
                             </p>
                             <p className="hover:text-gray-300">
                                 <strong>ANKARA OFİS</strong>
                                 <br />
                                 Çukurca Birlik Mah. 447 Sk. No: 3/5
+                                <br />
                                 Çankaya/ANKARA
                                 <br />
-                                Telefon : +90 312 495 64 50
+                                Telefon : +90 312 495 64 90
                                 <br />
                                 Fax : +90 312 495 64 93
                             </p>
