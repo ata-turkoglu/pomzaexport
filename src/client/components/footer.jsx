@@ -150,12 +150,6 @@ function Footer({ hFull = false }) {
                             >
                                 Korund
                             </Link>
-                            <Link
-                                to="/product/13"
-                                className="block hover:text-gray-300"
-                            >
-                                Kil
-                            </Link>
                         </ul>
                     </div>
 

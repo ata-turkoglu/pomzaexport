@@ -84,30 +84,158 @@ export default function Product() {
                         </h1>
                     </div>
                     <div className="p-3 w-full md:w-2/3 h-fit">
-                        <Accordion
-                            open={openAcc1}
-                            animate={CUSTOM_ANIMATION}
-                            className="pt-5"
-                            icon={<Icon id={1} open={openAcc1} />}
-                        >
-                            <AccordionHeader onClick={handleOpenAcc1}>
-                                Ürün Bilgileri
-                            </AccordionHeader>
-                            <AccordionBody className="text-md">
-                                {typeof productData.description.tr ==
-                                "string" ? (
-                                    productData.description.tr
-                                ) : (
+                        {productData.id == 7 && (
+                            <div>
+                                <h3 className="font-semibold text-xl font-sans text-blue-gray-900 transition-colors">
+                                    Perlit Nedir?
+                                </h3>
+                                <br />
+                                <span className="text-gray-700">
+                                    Perlit, volkanik camın ısıl işlemle
+                                    genleştirilmesi sonucu elde edilen,
+                                    gözenekli bir yapıya sahip, hafif ve çok
+                                    yönlü bir mineraldir. Şirketimiz,
+                                    Türkiye'nin en geniş perlit sahasında
+                                    yenilikçi ve sürdürülebilir perlit üretim
+                                    yapmaktadır. Türlü kalibrasyonlarda ham ve
+                                    genleşmiş; ve mikronize perlit ürünlerini
+                                    ETİPER markası ile pazara sunmaktadır.
+                                </span>
+                                <br />
+                                <br />
+                                <span className="text-gray-700">
+                                    ETİPER perliti, ileri teknoloji
+                                    tesislerimizde işlenerek tarım, inşaat,
+                                    filtrasyon, döküm ve gıda gibi birçok
+                                    sektörde kullanılabilecek yüksek kaliteli
+                                    ürünler haline getirilir.
+                                </span>
+                            </div>
+                        )}
+                        {productData.id == 7 ? (
+                            <Accordion
+                                open={openAcc1}
+                                animate={CUSTOM_ANIMATION}
+                                className="pt-5"
+                                icon={<Icon id={1} open={openAcc1} />}
+                            >
+                                <AccordionHeader onClick={handleOpenAcc1}>
+                                    Ürün Bilgileri
+                                </AccordionHeader>
+                                <AccordionBody className="text-md">
                                     <ul>
-                                        {productData.description.tr.map(
-                                            (itm, indx) => (
-                                                <li key={indx}>{itm}</li>
-                                            )
-                                        )}
+                                        <li className="mb-3">
+                                            <strong>Tozsuzdur: </strong>Kullanım
+                                            esnasında kolaylık sağlar.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                İdeal Tane Boyutu ve Gözenek
+                                                Yapısı:{" "}
+                                            </strong>
+                                            İleri teknoloji ile üretilir,
+                                            homojen ve standart kalite sağlar.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Sterildir ve Hastalıklardan
+                                                Aridir:{" "}
+                                            </strong>
+                                            Güvenli bir ortam sağlar, hastalık
+                                            taşımaz ve yaymaz.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                İnorganiktir ve Uzun Ömürlüdür:{" "}
+                                            </strong>
+                                            Dayanıklı bir yapıya sahiptir.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>%100 Yerli Üretim: </strong>
+                                            Türkiye'nin zengin kaynaklarından
+                                            elde edilmiştir.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Bitki Sağlığına Destek:{" "}
+                                            </strong>
+                                            Tarım perliti kök izolasyonu sağlar,
+                                            kök dostudur ve tüm bitki
+                                            çeşitlerinde yüksek verimlilik elde
+                                            edilmesine yardımcı olur.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Fiyat/Performans Oranı
+                                                Yüksektir:{" "}
+                                            </strong>
+                                            Standart kalite ile tam homojenlik
+                                            sağlar.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Sulama İhtiyacını Azaltır:{" "}
+                                            </strong>
+                                            Su tasarrufu sağlar.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Sterilizasyon Sonrası Tekrar
+                                                Kullanılabilir:{" "}
+                                            </strong>
+                                            Dayanıklı ve yeniden kullanılabilir
+                                            bir üründür.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Kullanıma Hazır Ambalajda ve
+                                                Zamanında Teslim:{" "}
+                                            </strong>
+                                            Her teslimat özenle hazırlanarak
+                                            zamanında yapılır.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>
+                                                İhracat potansiyeline sahiptir:{" "}
+                                            </strong>
+                                            Hollanda, İspanya ve Hindistan başta
+                                            olmak üzere birçok ülkeye ihraç
+                                            edilmektedir.
+                                        </li>
                                     </ul>
-                                )}
-                            </AccordionBody>
-                        </Accordion>
+                                </AccordionBody>
+                            </Accordion>
+                        ) : (
+                            <Accordion
+                                open={openAcc1}
+                                animate={CUSTOM_ANIMATION}
+                                className="pt-5"
+                                icon={<Icon id={1} open={openAcc1} />}
+                            >
+                                <AccordionHeader onClick={handleOpenAcc1}>
+                                    Ürün Bilgileri
+                                </AccordionHeader>
+                                <AccordionBody className="text-md">
+                                    {typeof productData.description.tr ==
+                                    "string" ? (
+                                        productData.description.tr
+                                    ) : (
+                                        <ul>
+                                            {productData.description.tr.map(
+                                                (itm, indx) => (
+                                                    <li
+                                                        key={indx}
+                                                        className="mb-2"
+                                                    >
+                                                        {itm}
+                                                    </li>
+                                                )
+                                            )}
+                                        </ul>
+                                    )}
+                                </AccordionBody>
+                            </Accordion>
+                        )}
                         {productData.images.length > 0 && (
                             <Accordion
                                 open={openAcc2}
@@ -148,8 +276,85 @@ export default function Product() {
                                 <AccordionHeader onClick={handleOpenAcc3}>
                                     Kullanım Alanları
                                 </AccordionHeader>
-                                <AccordionBody className="text-md">
+                                {/* <AccordionBody className="text-md">
                                     {productData.usageAreas.tr}
+                                </AccordionBody> */}
+                                <AccordionBody className="text-md">
+                                    {typeof productData.usageAreas.tr ==
+                                    "string" ? (
+                                        productData.usageAreas.tr
+                                    ) : (
+                                        <ul>
+                                            {productData.usageAreas.tr.map(
+                                                (itm, indx) => (
+                                                    <li
+                                                        key={indx}
+                                                        className="mb-3"
+                                                    >
+                                                        {itm}
+                                                    </li>
+                                                )
+                                            )}
+                                        </ul>
+                                    )}
+                                </AccordionBody>
+                            </Accordion>
+                        )}
+                        {productData.id == 7 && (
+                            <Accordion
+                                open={openAcc3}
+                                animate={CUSTOM_ANIMATION}
+                                className="pt-5"
+                                icon={<Icon id={3} open={openAcc3} />}
+                            >
+                                <AccordionHeader onClick={handleOpenAcc3}>
+                                    Kullanım Alanları
+                                </AccordionHeader>
+                                <AccordionBody className="text-md">
+                                    <ul>
+                                        <li className="mb-3">
+                                            <strong>
+                                                Tarım ve Bahçecilik:{" "}
+                                            </strong>
+                                            Toprak düzenleyici olarak
+                                            kullanılır. Bitkilerin kök
+                                            izolasyonunu sağlar, su tutma
+                                            kapasitesini artırır ve toprağın
+                                            havalanmasını sağlar. Bitki
+                                            sağlığını destekler ve yüksek
+                                            verimlilik elde edilmesine yardımcı
+                                            olur.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>İnşaat: </strong>Hafif dolgu
+                                            malzemesi olarak kullanılarak
+                                            binaların ısı yalıtım özelliklerini
+                                            artırır. Yeniköy perlit sahamızın
+                                            sert ve dayanıklı perliti, inşaat
+                                            sektörü için en uygun perlit
+                                            yapısını sunar. ETİPER inşaat
+                                            perliti, birçok sektör lideri
+                                            tarafından tercih edilmektedir.{" "}
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>Filtrasyon: </strong>
+                                            Sıvıların arıtılması ve
+                                            saflaştırılması süreçlerinde yaygın
+                                            olarak kullanılır. Kimyasallardan
+                                            organik maddelere kadar geniş bir
+                                            filtreleme kapasitesine sahiptir.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>Döküm: </strong>Döküm
+                                            kalıplarında ısıya dayanıklılık
+                                            sağlamak için kullanılır.
+                                        </li>
+                                        <li className="mb-3">
+                                            <strong>Gıda: </strong>Gıda işleme
+                                            ve depolama süreçlerinde yardımcı
+                                            bir malzeme olarak tercih edilir.
+                                        </li>
+                                    </ul>
                                 </AccordionBody>
                             </Accordion>
                         )}
