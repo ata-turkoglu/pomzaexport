@@ -64,6 +64,20 @@ export default function Product() {
         setProductData(data);
     }, [productId]);
 
+    const SetUsageAreaListItem = (text) => {
+        if (text.includes(":")) {
+            const parts = text.split(":");
+
+            return (
+                <div>
+                    <strong>{parts[0]}</strong>: {parts[1]}
+                </div>
+            );
+        } else {
+            return text;
+        }
+    };
+
     return (
         <div className="h-fit">
             {productData && (
@@ -291,7 +305,9 @@ export default function Product() {
                                                         key={indx}
                                                         className="mb-3"
                                                     >
-                                                        {itm}
+                                                        {SetUsageAreaListItem(
+                                                            itm
+                                                        )}
                                                     </li>
                                                 )
                                             )}
